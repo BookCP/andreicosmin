@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmin Parnia — CV</title>
+    <title>Andrei Cosmin Parnia — CV</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,7 +14,7 @@
             font-size: 15px;
         }
         .page {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 70px auto 40px;
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -73,6 +73,10 @@
             gap: 8px;
             line-height: 1.5;
         }
+        .side-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
         .side-item a {
             color: #93c5fd;
             text-decoration: none;
@@ -90,6 +94,12 @@
             border-radius: 4px;
             border: 1px solid rgba(255,255,255,0.1);
             line-height: 1.4;
+        }
+        .cert-note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.5;
         }
         .lang-row {
             margin-bottom: 14px;
@@ -145,6 +155,9 @@
             font-size: 15px;
             color: #475569;
             line-height: 1.75;
+        }
+        .profile-text p {
+            margin-bottom: 14px;
         }
         .job {
             margin-bottom: 28px;
@@ -207,29 +220,10 @@
             text-decoration: none;
             z-index: 1000;
         }
-        .project-box {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 16px;
-        }
-        .project-box h4 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #1e293b;
-        }
-        .project-box p {
-            font-size: 14px;
-            color: #475569;
-            line-height: 1.6;
-            margin: 0;
-        }
         @media (max-width: 900px) {
-            .page { grid-template-columns: 1fr; margin: 0; border-radius: 0; }
+            .page { grid-template-columns: 1fr; margin: 70px 0 0; border-radius: 0; }
             .sidebar { padding: 28px; }
-            .main { padding: 28px; }
+            .main { padding: 28px 20px; }
         }
     </style>
 </head>
@@ -238,113 +232,98 @@
     <div class="page">
         <aside class="sidebar">
             <div class="photo-wrap">
-                <img src="photo.jpg" alt="Cosmin Parnia" class="photo">
+                <img src="photo.jpg" alt="Andrei Cosmin Parnia" class="photo">
             </div>
-            <div class="side-name">Cosmin Parnia</div>
-            <div class="side-title">Service Design & Platform Operations</div>
+            <div class="side-name">Andrei Cosmin Parnia</div>
+            <div class="side-title">IT Operations | Service Design | Business IT</div>
 
             <div class="side-section">
                 <div class="side-heading">Contact</div>
                 <div class="side-item">📍 Frankfurt am Main, Germany</div>
+                <div class="side-item">📍 Relocating to Basel, Switzerland for FHNW BIT</div>
                 <div class="side-item">✉️ <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a></div>
                 <div class="side-item">📞 +41 79 720 15 01</div>
-                <a href="https://www.linkedin.com/in/cosmin-parnia/">LinkedIn</a>
+                <div class="side-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#93c5fd"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg> <a href="https://www.linkedin.com/in/cosmin-parnia/" target="_blank">LinkedIn</a></div>
                 <div class="side-item">🌐 <a href="portfolio.html">Portfolio</a></div>
             </div>
-                <div class="side-section">
-                    <div class="side-heading">Documents</div>
-                    <div class="side-item">📄 <a href="Cosmin%20Parnia_Reference%20Letter.pdf" target="_blank">Reference Letter (Morningstar)</a></div>
-                </div>
-
             <div class="side-section">
-                <div class="side-heading">Technical Skills</div>
-                <div class="tag-list">
-                    <span class="side-tag">Atlassian Platform</span>
-                    <span class="side-tag">Jira / JSM / Assets</span>
-                    <span class="side-tag">Confluence</span>
-                    <span class="side-tag">ServiceNow</span>
-                    <span class="side-tag">Microsoft 365</span>
-                    <span class="side-tag">Entra ID / Intune</span>
-                    <span class="side-tag">Google Workspace</span>
-                    <span class="side-tag">Active Directory</span>
-                    <span class="side-tag">GitLab</span>
-                    <span class="side-tag">Slack Admin</span>
-                </div>
+                <div class="side-heading">Documents</div>
+                <div class="side-item">📄 <a href="Cosmin%20Parnia_Reference%20Letter.pdf" target="_blank">Reference Letter (Morningstar)</a></div>
+            </div>
+            <div class="side-section">
+                <div class="side-heading">Details</div>
+                <div class="side-item">🎂 26.04.1995</div>
+                <div class="side-item">🛂 EU Citizen | Swiss B/G Permit Eligible</div>
+                <div class="side-item">🇷🇴 Romanian</div>
             </div>
 
             <div class="side-section">
-                <div class="side-heading">Process & Design</div>
+                <div class="side-heading">Skills</div>
                 <div class="tag-list">
-                    <span class="side-tag">ITIL 4</span>
-                    <span class="side-tag">Service Design</span>
+                    <span class="side-tag">Atlassian Platform (Jira, JSM, Assets, Confluence)</span>
                     <span class="side-tag">ITSM Process Design</span>
+                    <span class="side-tag">Service Design</span>
                     <span class="side-tag">Process Improvement</span>
-                    <span class="side-tag">Workflow Automation</span>
-                    <span class="side-tag">CMDB</span>
-                    <span class="side-tag">Vendor Management</span>
-                    <span class="side-tag">AI-assisted Analysis</span>
+                    <span class="side-tag">Active Directory</span>
+                    <span class="side-tag">Entra ID</span>
+                    <span class="side-tag">Intune</span>
+                    <span class="side-tag">Microsoft 365</span>
+                    <span class="side-tag">Google Workspace</span>
+                    <span class="side-tag">AI-assisted workflows / data analysis</span>
                 </div>
-            </div>
-
-            <div class="side-section">
-                <div class="side-heading">Soft Skills</div>
-                <div class="tag-list">
-                    <span class="side-tag">Stakeholder Management</span>
-                    <span class="side-tag">Requirements Gathering</span>
-                    <span class="side-tag">Training & Documentation</span>
-                    <span class="side-tag">Cross-functional Coordination</span>
-                </div>
+                <div class="cert-note">ITIL 4 · Cert. No. GR671864940AP</div>
             </div>
 
             <div class="side-section">
                 <div class="side-heading">Languages</div>
                 <div class="lang-row">
-                    <div class="lang-name">Romanian <span class="lang-level">Native</span></div>
+                    <div class="lang-name">Romanian <span class="lang-level">Native (C2)</span></div>
                     <div class="lang-bar"><div class="lang-fill" style="width: 100%"></div></div>
                 </div>
                 <div class="lang-row">
-                    <div class="lang-name">English <span class="lang-level">C1</span></div>
+                    <div class="lang-name">English <span class="lang-level">Highly proficient (C1)</span></div>
                     <div class="lang-bar"><div class="lang-fill" style="width: 90%"></div></div>
                 </div>
                 <div class="lang-row">
-                    <div class="lang-name">German <span class="lang-level">A2 — studying</span></div>
-                    <div class="lang-bar"><div class="lang-fill" style="width: 25%"></div></div>
+                    <div class="lang-name">Deutsch <span class="lang-level">Continuing studies — Beginner (A2)</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 20%"></div></div>
                 </div>
+            </div>
+
+            <div class="side-section">
+                <div class="side-heading">Personal Project</div>
+                <div class="side-item"><a href="https://www.claere.com" target="_blank">Claere</a> is a platform built around authentic long-form personal storytelling, with focus around privacy</div>
             </div>
         </aside>
 
         <main class="main">
             <div class="section">
-                <div class="section-title">Profile</div>
+                <div class="section-title">Summary</div>
                 <div class="profile-text">
-                    With 6 years of experience in IT, I have always been interested in improving how things work. 
-                    During my time at DeepL, working more closely with business teams showed me that good solutions start with understanding 
-                    <strong>why</strong> before deciding <strong>how</strong>. That experience motivated me to pursue a 
-                    <strong>Bachelor's in Business Information Technology at FHNW</strong> in Basel, where I will begin my studies in September 2026. 
-                    I am therefore seeking opportunities in Basel, Zurich, or within commuting distance of Basel.
+                    <p>With 6 years of experience in IT, I have always been interested in improving how things work. During my time at DeepL, working more closely with business teams showed me that good solutions start with understanding <strong>why</strong> before deciding <strong>how</strong>. That experience motivated me to pursue a <strong>Bachelor's in Business Information Technology at University of Applied Sciences Northwestern Switzerland</strong> in Basel, where I will begin my studies in September 2026.</p>
+                    <p>I am therefore seeking opportunities in Basel, Zurich, or within commuting distance of Basel.</p>
                 </div>
             </div>
 
             <div class="section">
-                <div class="section-title">Experience</div>
+                <div class="section-title">Work experience</div>
 
                 <div class="job">
                     <div class="job-header">
                         <div class="job-dot"></div>
-                        <div class="job-date">May 2023 – Sept 2026</div>
-                        <div class="job-title">IT Support & Platform Specialist</div>
+                        <div class="job-date">May 2023 – Today</div>
+                        <div class="job-title">IT Support &amp; Platform Specialist</div>
                     </div>
                     <div class="job-company">DeepL SE · Cologne, Germany</div>
                     <div class="job-desc">
                         <ul>
-                            <li>Redesigned internal service portals using ITSM and behavioural psychology research, replacing legacy ticket categories with intent-based request forms</li>
-                            <li>Administered the Atlassian platform across 150+ internal projects, building automation and workflows for approvals, compliance, and service delivery</li>
-                            <li>Led the Asana-to-Jira migration for 7 teams (~80 users) from stakeholder consultation through post-migration training</li>
-                            <li>Maintained 4.9/5 CSAT across 2,000+ tickets resolved, with 6-hour average first response</li>
-                            <li>Designed a centralized software asset inventory (CMDB) in Jira Assets, defining the asset model and working with cross-functional stakeholders on governance and procurement</li>
-                            <li>Managed vendor relationships alongside budget planning input</li>
-                            <li>Contributed to 10+ hiring interviews for IT Support and Atlassian Admin roles</li>
-                            <li>Investigated cross-platform incidents (identity, email, cloud, Atlassian) with root cause analysis, coordinating remediation across teams</li>
+                            <li>Redesigned internal service portals used across the company — applied ITSM and behavioural psychology research to replace legacy ticket categories with intent-based request forms for IT Support, and used AI-assisted analysis of ticket volumes and categories to drive continuous improvement for other internal support functions.</li>
+                            <li>Administered DeepL's Atlassian platform across 150+ internal projects, building multiple automation and workflows that supported approvals, compliance processes, and service delivery for teams across the organization.</li>
+                            <li>Owned the design of a centralized software asset inventory in Jira Assets (CMDB), defining the asset model, evaluating implementation approaches, and working with cross-functional stakeholders to support software governance and procurement decisions.</li>
+                            <li>Played a leading role the Asana-to-Jira migration for 7 teams (~80 users) over 3 months — from stakeholder consultation and tool evaluation through data migration and post-migration training, successfully moving 6 of 7 teams.</li>
+                            <li>Investigated cross-platform incidents (identity, email, cloud, Atlassian) with root cause analysis, coordinating remediation across infrastructure and platform teams.</li>
+                            <li>Supported team growth and operational efficiency by contributing to 10+ hiring interviews for IT Support and Atlassian Admin roles, and managing vendor relationships alongside budget planning input.</li>
+                            <li>Maintained 4.9/5 CSAT across 2,000+ tickets resolved with a 6-hour average first response, supporting a 1,200+ employee environment via Jira and the company-wide Slack support channel.</li>
                         </ul>
                     </div>
                 </div>
@@ -355,14 +334,14 @@
                         <div class="job-date">May 2021 – April 2023</div>
                         <div class="job-title">IT Support Specialist</div>
                     </div>
-                    <div class="job-company">Morningstar GmbH · Frankfurt, Germany</div>
+                    <div class="job-company">Morningstar GmbH · Frankfurt am Main, Germany</div>
                     <div class="job-desc">
                         <ul>
-                            <li>Owned regional IT support for six offices across Germany, Switzerland, Sweden and Denmark as the point of contact</li>
-                            <li>Created the first knowledge base documenting setup and procedures for regional offices</li>
-                            <li>Coordinated between local users and global infrastructure teams, escalating regional issues upstream and managing infrastructure-driven changes back to local offices</li>
-                            <li>Participated in the Citrix-to-AWS migration as a pre-rollout tester, then owned post-rollout support for Frankfurt and London including training ~100 users</li>
-                            <li>Executed hardware and software asset lifecycle for ~500 regional assets including procurement, audits, device rebuilds, and end-of-life</li>
+                            <li>Owned regional IT support for six offices across Germany, Switzerland, Sweden and Denmark as the POC, and created the first knowledge base documenting setup and procedures for the regional offices.</li>
+                            <li>Coordinated directly between local users and global infrastructure teams — escalating regional issues upstream and managing infrastructure-driven changes back to local offices.</li>
+                            <li>Led local diagnosis during incidents affecting the regional offices, working with global infrastructure teams on root cause analysis and remediation.</li>
+                            <li>Participated in the Citrix-to-AWS migration as a pre-rollout tester, then owned post-rollout support for Frankfurt and London — including training ~100 users in sessions built around early ticket patterns.</li>
+                            <li>Executed hardware and software asset lifecycle for ~500 regional assets — including procurement, audits, device rebuilds, and end-of-life handling.</li>
                         </ul>
                     </div>
                 </div>
@@ -370,15 +349,15 @@
                 <div class="job">
                     <div class="job-header">
                         <div class="job-dot"></div>
-                        <div class="job-date">Oct 2019 – April 2021</div>
+                        <div class="job-date">October 2019 – April 2021</div>
                         <div class="job-title">IT Support Specialist</div>
                     </div>
                     <div class="job-company">Cognizant SoftVision · Bucharest, Romania</div>
                     <div class="job-desc">
                         <ul>
-                            <li>Delivered on-site IT support for ~70 developers across two offices, maintaining ticket resolution above 90% within SLA</li>
-                            <li>Managed user provisioning and access control through Active Directory including onboarding, offboarding, and ongoing permission changes</li>
-                            <li>Created and maintained technical documentation and support procedures in Confluence, standardizing recurring fixes and reducing dependency on individual team members</li>
+                            <li>Delivered on-site IT support for ~70 developers across two Bucharest offices, maintaining ticket resolution above 90% within SLA through Jira Service Management.</li>
+                            <li>Managed user provisioning and access control through Active Directory — including onboarding, offboarding, and ongoing permission changes.</li>
+                            <li>Created and maintained technical documentation and support procedures in Confluence — standardizing recurring fixes and reducing dependency on individual team members.</li>
                         </ul>
                     </div>
                 </div>
@@ -386,25 +365,17 @@
                 <div class="job">
                     <div class="job-header">
                         <div class="job-dot"></div>
-                        <div class="job-date">Nov 2018 – Oct 2019</div>
+                        <div class="job-date">November 2018 – October 2019</div>
                         <div class="job-title">IT Help Desk Agent</div>
                     </div>
                     <div class="job-company">TSG Romania · Bucharest, Romania</div>
                     <div class="job-desc">
                         <ul>
-                            <li>Delivered remote technical support for petrol stations across Romania and Moldova, resolving approximately 80% of incidents at first contact</li>
-                            <li>Supported a multi-system environment including POS terminals, pump controllers, station networking, and office computers</li>
-                            <li>Escalated complex incidents to L2 teams and worked with on-site technicians to coordinate remediation</li>
+                            <li>Delivered remote technical support for petrol stations across Romania and Moldova, resolving approximately 80% of incidents at first contact.</li>
+                            <li>Supported a multi-system environment including POS terminals, pump controllers, station networking, and office computers — diagnosing issues over phone and remote tools.</li>
+                            <li>Escalated complex incidents to L2 teams and worked with on-site technicians to coordinate remediation.</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Personal Project</div>
-                <div class="project-box">
-                    <h4>Claere — <a href="https://www.claere.com" target="_blank" style="color: #3b82f6; text-decoration: none;">claere.com</a></h4>
-                    <p>A platform built around authentic longform personal storytelling, with a focus on privacy. Responsible for product concept, user experience design, and feature prioritisation.</p>
                 </div>
             </div>
 
@@ -413,10 +384,10 @@
                 <div class="job">
                     <div class="job-header">
                         <div class="job-dot"></div>
-                        <div class="job-date">Starting Sept 2026</div>
+                        <div class="job-date">Starting in September 2026</div>
                         <div class="job-title">BSc Business Information Technology</div>
                     </div>
-                    <div class="job-company">FHNW University of Applied Sciences Northwestern Switzerland · Basel</div>
+                    <div class="job-company">FHNW University of Applied Sciences Northwestern Switzerland · Basel, Switzerland</div>
                 </div>
                 <div class="job">
                     <div class="job-header">
@@ -425,15 +396,6 @@
                         <div class="job-title">BA Romanian and English Language and Literature</div>
                     </div>
                     <div class="job-company">Hyperion University · Bucharest, Romania</div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Certifications</div>
-                <div class="job-desc" style="margin-left: 0;">
-                    <ul>
-                        <li>ITIL 4 Foundation · Cert. No. GR671864940AP</li>
-                    </ul>
                 </div>
             </div>
         </main>

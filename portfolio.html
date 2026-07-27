@@ -61,6 +61,10 @@
             color: #93c5fd;
             text-decoration: none;
         }
+        .sidebar-contact a svg {
+            vertical-align: -2px;
+            margin-right: 5px;
+        }
         .nav-title {
             font-size: 11px;
             text-transform: uppercase;
@@ -99,8 +103,7 @@
         }
         .content {
             margin-left: 240px;
-            padding: 48px 48px;
-            max-width: 720px;
+            padding: 48px 56px;
         }
         h1 {
             font-size: 36px;
@@ -144,6 +147,10 @@
             color: #334155;
             line-height: 1.7;
             margin-bottom: 24px;
+        }
+        .note {
+            font-size: 13px;
+            color: #94a3b8;
         }
         .callout {
             background: #eff6ff;
@@ -232,56 +239,47 @@
             margin-bottom: 8px;
             border: 1px solid #e2e8f0;
         }
-        /* Visual Workflow */
+        /* Workflow — Atlassian style */
         .flowchart {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             margin: 32px 0;
             flex-wrap: wrap;
-            padding: 28px;
+            padding: 32px 24px;
             background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-        }
-        .flow-box {
-            background: #f8fafc;
-            border: 2px solid #cbd5e1;
+            border: 1px solid #dfe1e6;
             border-radius: 8px;
-            padding: 16px 20px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #334155;
+            box-shadow: 0 1px 2px rgba(9,30,66,0.12);
+        }
+        .flow-node {
+            background: #fafbfc;
+            border: 1px solid #dfe1e6;
+            border-radius: 3px;
+            padding: 14px 18px;
             text-align: center;
-            min-width: 110px;
-        }
-        .flow-box.active {
-            background: #eff6ff;
-            border-color: #3b82f6;
-            color: #1e40af;
-        }
-        .flow-box.vip {
-            background: #fef3c7;
-            border-color: #f59e0b;
-            color: #92400e;
-        }
-        .flow-arrow {
-            font-size: 20px;
-            color: #94a3b8;
-        }
-        .flow-branch {
+            min-width: 140px;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 8px;
         }
-        .flow-label {
+        .lozenge {
+            display: inline-block;
             font-size: 11px;
-            color: #94a3b8;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
+            padding: 3px 8px;
+            border-radius: 3px;
         }
+        .lozenge-gray { background: #dfe1e6; color: #42526e; }
+        .lozenge-blue { background: #deebff; color: #0747a6; }
+        .lozenge-yellow { background: #fff0b3; color: #172b4d; }
+        .lozenge-green { background: #e3fcef; color: #006644; }
+        .flow-sub { font-size: 12px; color: #6b778c; }
+        .flow-arrow { font-size: 18px; color: #a5adba; }
         footer {
             margin-top: 80px;
             padding-top: 24px;
@@ -290,12 +288,15 @@
             color: #94a3b8;
         }
         @media (max-width: 900px) {
-            .sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid #e2e8f0; }
-            .content { margin-left: 0; padding: 32px 24px; max-width: 100%; }
-            .page { grid-template-columns: 1fr; }
+            .sidebar { position: relative; width: 100%; height: auto; border-bottom: 1px solid #e2e8f0; }
+            .content { margin-left: 0; padding: 32px 20px; }
             .nav-list { display: flex; flex-wrap: wrap; gap: 8px; }
             .nav-list a { margin-left: 0; padding: 8px 14px; border-left: none; border-bottom: 2px solid transparent; background: #1e293b; border-radius: 4px; }
             h1 { font-size: 28px; }
+            table { display: block; overflow-x: auto; }
+            .flowchart { flex-direction: column; }
+            .flow-node { width: 100%; }
+            .flow-arrow { transform: rotate(90deg); }
         }
     </style>
 </head>
@@ -307,7 +308,7 @@
             <div class="sidebar-role">Service Design & Platform Operations</div>
             <div class="sidebar-contact">
                 <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a><br>
-                <a href="https://www.linkedin.com/in/cosmin-parnia/" target="_blank">LinkedIn</a><br>
+                <a href="https://www.linkedin.com/in/cosmin-parnia/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#93c5fd"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a><br>
                 +41 79 720 15 01
             </div>
                 <div class="side-section" style="margin-bottom: 24px;">
@@ -355,7 +356,7 @@
                     They are proposals, analyses, and designs that I believed were necessary even when they were not assigned to me.
                 </p>
                 <div class="stats">
-                    <div class="stat"><div class="stat-number">681</div><div class="stat-label">Tickets resolved</div></div>
+                    <div class="stat"><div class="stat-number">646</div><div class="stat-label">Tickets resolved</div></div>
                     <div class="stat"><div class="stat-number">95%</div><div class="stat-label">Resolution rate</div></div>
                     <div class="stat"><div class="stat-number">95</div><div class="stat-label">Confluence pages</div></div>
                     <div class="stat"><div class="stat-number">142</div><div class="stat-label">GitLab commits</div></div>
@@ -388,7 +389,7 @@
                 <table>
                     <tr><th>Principle</th><th>Research Basis</th><th>How I Applied It</th></tr>
                     <tr><td>Recognition over Recall</td><td>Nielsen's Heuristic #6</td><td>Dropdowns and radio buttons for all finite answer sets; free text only for 200+ item lists</td></tr>
-                    <tr><td>Hick's Law</td><td>Decision time increases with choices; threshold ~10–15 items</td><td>Maximum 6–7 options per question</td></tr>
+                    <tr><td>Hick's Law</td><td>Decision time increases logarithmically with choices; threshold ~10–15 items</td><td>Maximum 6–7 options per question</td></tr>
                     <tr><td>Progressive Disclosure</td><td>Multi-step forms outperform single long forms by 10–20%</td><td>Maximum 3–4 visible fields at a time; forms unfold based on answers</td></tr>
                     <tr><td>Decision Fatigue</td><td>Quality degrades after 8–12 questions for frustrated users</td><td>No path exceeds 7 questions; break-fix form capped at 5</td></tr>
                 </table>
@@ -419,9 +420,10 @@
                     The new Help Center redesigned what the user sees. This proposal redesigned what happens <em>after</em> submission — 
                     how tickets flow between teams, how ownership transfers, and how we measure performance fairly.
                 </p>
+                <p class="note">Status: draft proposal, open for team feedback (April 2026).</p>
                 <div class="callout callout-warning">
                     <strong>Problem:</strong> 94.4% of tickets had no level label. There was no formal escalation path between L1, L2, and L3. 
-                    When we escalated, it happened in Slack DMs and nothing was recorded. Performance was measured by ticket count, 
+                    When we escalated, it happened informally — over Slack or verbally — and nothing was recorded. Performance was measured by ticket count, 
                     which penalised anyone who took on complex work.
                 </div>
                 <h4>Core principle</h4>
@@ -431,21 +433,27 @@
                 </div>
                 <h4>The workflow I designed</h4>
                 <div class="flowchart">
-                    <div class="flow-box">Triage<br><span style="font-size:11px;font-weight:400;color:#64748b;">L1 receives</span></div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-box active">In Progress<br><span style="font-size:11px;font-weight:400;color:#64748b;">L1 owns</span></div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-branch">
-                        <div class="flow-label">Escalate</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-box vip">Pending Specialist<br><span style="font-size:11px;font-weight:400;color:#64748b;">L2 or L3 owns</span></div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-label">Resolve or De-escalate</div>
+                    <div class="flow-node">
+                        <span class="lozenge lozenge-gray">Triage</span>
+                        <span class="flow-sub">L1 receives</span>
                     </div>
                     <div class="flow-arrow">→</div>
-                    <div class="flow-box active">Resolved</div>
+                    <div class="flow-node">
+                        <span class="lozenge lozenge-blue">In Progress</span>
+                        <span class="flow-sub">L1 owns</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node">
+                        <span class="lozenge lozenge-yellow">Pending Specialist</span>
+                        <span class="flow-sub">L2 or L3 owns</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node">
+                        <span class="lozenge lozenge-green">Resolved</span>
+                        <span class="flow-sub">De-escalation returns to L1 with feedback</span>
+                    </div>
                 </div>
-                <p style="text-align:center;font-size:13px;color:#64748b;margin-top:-12px;">
+                <p class="note" style="text-align:center;margin-top:-12px;">
                     If de-escalated: returns to L1 with feedback comments. If waiting: SLA clocks pause for all teams.
                 </p>
 
@@ -487,7 +495,7 @@
                 <p>
                     My most invisible but highest-leverage work was the Identity & Access Management pipeline. 
                     Every Phoenix, Vault, GitHub, Copilot, and ClickHouse access request at DeepL passed through a workflow I operated daily. 
-                    It ran across five tools, but the same piece of work was measured in each system separately.
+                    It ran across five tools, but the same piece of work was measured in two systems: Jira and GitLab.
                 </p>
                 <h4>The flow</h4>
                 <table>
@@ -521,8 +529,8 @@
             <div class="section">
                 <h3>Using data to drive operational decisions</h3>
                 <p>
-                    In March 2026 I facilitated a strategic workshop with my manager and team to align on how we worked, what we owned, and where we were going. 
-                    I did not run it on opinions. I ran it on one year of ticket data.
+                    In March 2026, my manager facilitated a strategic workshop to align the team on how we worked, what we owned, and where we were going. 
+                    It did not run on opinions — it ran on the one year of ticket data I prepared and analysed for it.
                 </p>
                 <h4>The dataset</h4>
                 <div class="stats">
@@ -531,16 +539,17 @@
                     <div class="stat"><div class="stat-number">507</div><div class="stat-label">Average per month</div></div>
                     <div class="stat"><div class="stat-number">10.6%</div><div class="stat-label">Unassigned</div></div>
                 </div>
+                <p class="note">ISE project, April 2025 – March 2026, excluding Onboarding and bot-processed tickets.</p>
                 <h4>Key findings I presented</h4>
                 <table>
                     <tr><th>Finding</th><th>Implication</th></tr>
                     <tr><td>94.4% of tickets had no level label</td><td>We could not measure how much work was L1 vs L2 vs L3</td></tr>
                     <tr><td>10.6% of tickets sat unassigned</td><td>No auto-assignment or round-robin existed; agents self-assigned</td></tr>
                     <tr><td>Priority changed on only 5.5% of tickets, mostly downgraded</td><td>Users overstated urgency less than we assumed</td></tr>
-                    <tr><td>Volume grew +24% YoY but team size did not</td><td>We needed process improvement, not just more people</td></tr>
+                    <tr><td>Volume grew +24.4% YoY — every month except November</td><td>Summer is not a quiet period; biggest jumps in June (+59.7%) and August (+42.6%)</td></tr>
                     <tr><td>No shared dashboards existed</td><td>The team had no visibility into ticket health</td></tr>
                 </table>
-                <h4>The action points I proposed</h4>
+                <h4>The action points we took away</h4>
                 <ol>
                     <li>Define team scope & responsibility matrix</li>
                     <li>Standardise triage & distribution with assignment rules</li>
@@ -608,7 +617,7 @@
                 <p style="margin-top: 24px;">
                     <strong>Email:</strong> <a href="mailto:cosminparnia@gmail.com" style="color: #3b82f6;">cosminparnia@gmail.com</a><br>
                     <strong>Phone:</strong> +41 79 720 15 01<br>
-                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/cosmin-parnia/" target="_blank" style="color: #3b82f6;">https://www.linkedin.com/in/cosmin-parnia/</a>
+                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/cosmin-parnia/" target="_blank" style="color: #3b82f6;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#3b82f6" style="vertical-align: -2px; margin-right: 4px;"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>cosmin-parnia</a>
                 </p>
             </div>
 

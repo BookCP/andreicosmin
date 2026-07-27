@@ -73,6 +73,10 @@
             gap: 8px;
             line-height: 1.5;
         }
+        .side-item .lbl {
+            color: #64748b;
+            flex-shrink: 0;
+        }
         .side-item svg {
             flex-shrink: 0;
             margin-top: 2px;
@@ -80,6 +84,15 @@
         .side-item a {
             color: #93c5fd;
             text-decoration: none;
+        }
+        .skill-group {
+            margin-bottom: 14px;
+        }
+        .skill-group-name {
+            font-size: 13px;
+            color: rgba(255,255,255,0.9);
+            font-weight: 600;
+            margin-bottom: 6px;
         }
         .tag-list {
             display: flex;
@@ -96,9 +109,9 @@
             line-height: 1.4;
         }
         .cert-note {
-            margin-top: 12px;
-            font-size: 12px;
-            color: #94a3b8;
+            margin-top: 14px;
+            font-size: 13px;
+            color: #cbd5e1;
             line-height: 1.5;
         }
         .lang-row {
@@ -110,10 +123,12 @@
             margin-bottom: 4px;
             display: flex;
             justify-content: space-between;
+            gap: 16px;
         }
         .lang-level {
             font-size: 12px;
             color: #64748b;
+            text-align: right;
         }
         .lang-bar {
             height: 4px;
@@ -239,39 +254,90 @@
 
             <div class="side-section">
                 <div class="side-heading">Contact</div>
-                <div class="side-item">📍 Frankfurt am Main, Germany</div>
-                <div class="side-item">📍 Relocating to Basel, Switzerland for FHNW BIT</div>
-                <div class="side-item">✉️ <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a></div>
-                <div class="side-item">📞 +41 79 720 15 01</div>
-                <div class="side-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#93c5fd"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg> <a href="https://www.linkedin.com/in/cosmin-parnia/" target="_blank">LinkedIn</a></div>
-                <div class="side-item">🌐 <a href="portfolio.html">Portfolio</a></div>
+                <div class="side-item"><span class="lbl">Location:</span> Frankfurt am Main, Germany</div>
+                <div class="side-item"><span class="lbl">Relocation:</span> Basel, Switzerland for FHNW BIT</div>
+                <div class="side-item"><span class="lbl">Email:</span> <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a></div>
+                <div class="side-item"><span class="lbl">Phone:</span> +41 79 720 15 01</div>
+                <div class="side-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#93c5fd"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg> <a href="https://www.linkedin.com/in/cosmin-parnia/" target="_blank">cosmin-parnia ↗</a></div>
+                <div class="side-item"><span class="lbl">Portfolio:</span> <a href="portfolio.html">View portfolio ↗</a></div>
             </div>
             <div class="side-section">
                 <div class="side-heading">Documents</div>
-                <div class="side-item">📄 <a href="Cosmin%20Parnia_Reference%20Letter.pdf" target="_blank">Reference Letter (Morningstar)</a></div>
+                <div class="side-item"><a href="Cosmin%20Parnia_Reference%20Letter.pdf" target="_blank">Reference Letter ↗</a></div>
             </div>
             <div class="side-section">
                 <div class="side-heading">Details</div>
-                <div class="side-item">🎂 26.04.1995</div>
-                <div class="side-item">🛂 EU Citizen | Swiss B/G Permit Eligible</div>
-                <div class="side-item">🇷🇴 Romanian</div>
+                <div class="side-item"><span class="lbl">Birthday:</span> 26.04.1995</div>
+                <div class="side-item"><span class="lbl">Permit status:</span> EU Citizen | Swiss B/G Permit Eligible</div>
+                <div class="side-item"><span class="lbl">Citizenship:</span> Romanian</div>
             </div>
 
             <div class="side-section">
-                <div class="side-heading">Skills</div>
-                <div class="tag-list">
-                    <span class="side-tag">Atlassian Platform (Jira, JSM, Assets, Confluence)</span>
-                    <span class="side-tag">ITSM Process Design</span>
-                    <span class="side-tag">Service Design</span>
-                    <span class="side-tag">Process Improvement</span>
-                    <span class="side-tag">Active Directory</span>
-                    <span class="side-tag">Entra ID</span>
-                    <span class="side-tag">Intune</span>
-                    <span class="side-tag">Microsoft 365</span>
-                    <span class="side-tag">Google Workspace</span>
-                    <span class="side-tag">AI-assisted workflows / data analysis</span>
+                <div class="side-heading">Technical Skills</div>
+                <div class="skill-group">
+                    <div class="skill-group-name">Identity &amp; Access</div>
+                    <div class="tag-list">
+                        <span class="side-tag">Active Directory</span>
+                        <span class="side-tag">Google Workspace</span>
+                        <span class="side-tag">Keycloak (SSO)</span>
+                    </div>
                 </div>
-                <div class="cert-note">ITIL 4 · Cert. No. GR671864940AP</div>
+                <div class="skill-group">
+                    <div class="skill-group-name">Microsoft Ecosystem</div>
+                    <div class="tag-list">
+                        <span class="side-tag">Entra ID (formerly Azure AD)</span>
+                        <span class="side-tag">Microsoft 365 Admin Center</span>
+                        <span class="side-tag">Intune</span>
+                        <span class="side-tag">Exchange Online</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-name">ITSM &amp; Process</div>
+                    <div class="tag-list">
+                        <span class="side-tag">ITIL 4</span>
+                        <span class="side-tag">ITSM Process Design</span>
+                        <span class="side-tag">Continuous Improvement</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-name">ITSM Tools</div>
+                    <div class="tag-list">
+                        <span class="side-tag">Jira (Service Management, Administration, Automation, Assets – CMDB)</span>
+                        <span class="side-tag">Zendesk</span>
+                        <span class="side-tag">ServiceNow</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-name">Collaboration &amp; Productivity</div>
+                    <div class="tag-list">
+                        <span class="side-tag">Slack</span>
+                        <span class="side-tag">Zoom</span>
+                        <span class="side-tag">Confluence</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-name">Infrastructure &amp; Systems</div>
+                    <div class="tag-list">
+                        <span class="side-tag">AWS</span>
+                        <span class="side-tag">VMware</span>
+                        <span class="side-tag">JAMF</span>
+                        <span class="side-tag">Git/GitLab</span>
+                        <span class="side-tag">Windows Server</span>
+                        <span class="side-tag">macOS</span>
+                        <span class="side-tag">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-name">Networking</div>
+                    <div class="tag-list">
+                        <span class="side-tag">TCP/IP</span>
+                        <span class="side-tag">DNS</span>
+                        <span class="side-tag">DHCP</span>
+                        <span class="side-tag">VPN</span>
+                        <span class="side-tag">Wi-Fi troubleshooting</span>
+                    </div>
+                </div>
+                <div class="cert-note"><strong>ITIL 4 Foundation · Cert. No. GR671864940AP</strong></div>
             </div>
 
             <div class="side-section">
@@ -285,14 +351,14 @@
                     <div class="lang-bar"><div class="lang-fill" style="width: 90%"></div></div>
                 </div>
                 <div class="lang-row">
-                    <div class="lang-name">Deutsch <span class="lang-level">Continuing studies — Beginner (A2)</span></div>
+                    <div class="lang-name">German <span class="lang-level">Beginner (A2) — continuing studies</span></div>
                     <div class="lang-bar"><div class="lang-fill" style="width: 20%"></div></div>
                 </div>
             </div>
 
             <div class="side-section">
                 <div class="side-heading">Personal Project</div>
-                <div class="side-item"><a href="https://www.claere.com" target="_blank">Claere</a> is a platform built around authentic long-form personal storytelling, with focus around privacy</div>
+                <div class="side-item"><a href="https://www.claere.com" target="_blank">Claere ↗</a>&nbsp;is a platform built around authentic long-form personal storytelling, with focus around privacy</div>
             </div>
         </aside>
 
@@ -387,7 +453,7 @@
                         <div class="job-date">Starting in September 2026</div>
                         <div class="job-title">BSc Business Information Technology</div>
                     </div>
-                    <div class="job-company">FHNW University of Applied Sciences Northwestern Switzerland · Basel, Switzerland</div>
+                    <div class="job-company">University of Applied Sciences Northwestern Switzerland · Basel, Switzerland</div>
                 </div>
                 <div class="job">
                     <div class="job-header">

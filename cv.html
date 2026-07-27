@@ -10,68 +10,68 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: #f1f5f9;
             color: #1e293b;
-            line-height: 1.6;
-            font-size: 14px;
+            line-height: 1.65;
+            font-size: 15px;
         }
         .page {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 40px auto;
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 300px 1fr;
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 24px rgba(0,0,0,0.08);
         }
-        /* Sidebar */
         .sidebar {
             background: #0f172a;
             color: #fff;
-            padding: 32px 24px;
+            padding: 36px 28px;
         }
         .photo-wrap {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         .photo {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 3px solid rgba(255,255,255,0.15);
             object-fit: cover;
         }
         .side-name {
             text-align: center;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
         .side-title {
             text-align: center;
-            font-size: 12px;
+            font-size: 13px;
             color: #93c5fd;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 28px;
+            margin-bottom: 32px;
         }
         .side-section {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
         .side-heading {
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #64748b;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             font-weight: 600;
         }
         .side-item {
-            font-size: 13px;
+            font-size: 14px;
             color: rgba(255,255,255,0.8);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             display: flex;
             align-items: flex-start;
             gap: 8px;
+            line-height: 1.5;
         }
         .side-item a {
             color: #93c5fd;
@@ -83,25 +83,26 @@
             gap: 6px;
         }
         .side-tag {
-            font-size: 11px;
+            font-size: 12px;
             background: rgba(255,255,255,0.08);
             color: rgba(255,255,255,0.85);
-            padding: 4px 10px;
+            padding: 5px 10px;
             border-radius: 4px;
             border: 1px solid rgba(255,255,255,0.1);
+            line-height: 1.4;
         }
         .lang-row {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
         .lang-name {
-            font-size: 13px;
+            font-size: 14px;
             color: rgba(255,255,255,0.9);
             margin-bottom: 4px;
             display: flex;
             justify-content: space-between;
         }
         .lang-level {
-            font-size: 11px;
+            font-size: 12px;
             color: #64748b;
         }
         .lang-bar {
@@ -115,78 +116,84 @@
             background: #3b82f6;
             border-radius: 2px;
         }
-        /* Main */
         .main {
-            padding: 40px 40px;
+            padding: 44px 44px;
         }
         .section {
-            margin-bottom: 32px;
+            margin-bottom: 36px;
         }
         .section-title {
-            font-size: 12px;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #64748b;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
         .section-title::before {
             content: "";
             display: block;
             width: 3px;
-            height: 16px;
+            height: 18px;
             background: #3b82f6;
             border-radius: 2px;
         }
         .profile-text {
-            font-size: 14px;
+            font-size: 15px;
             color: #475569;
-            line-height: 1.7;
+            line-height: 1.75;
         }
         .job {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
         .job-header {
             display: flex;
             align-items: baseline;
-            gap: 8px;
-            margin-bottom: 4px;
+            gap: 10px;
+            margin-bottom: 6px;
             flex-wrap: wrap;
         }
         .job-dot {
-            width: 8px;
-            height: 8px;
+            width: 9px;
+            height: 9px;
             background: #3b82f6;
             border-radius: 50%;
             flex-shrink: 0;
-            margin-top: 6px;
+            margin-top: 7px;
         }
         .job-title {
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 600;
             color: #1e293b;
         }
         .job-date {
-            font-size: 12px;
+            font-size: 13px;
             color: #3b82f6;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         .job-company {
-            font-size: 13px;
+            font-size: 14px;
             color: #64748b;
-            margin-bottom: 8px;
-            margin-left: 16px;
+            margin-bottom: 10px;
+            margin-left: 19px;
         }
         .job-desc {
-            font-size: 13px;
+            font-size: 14px;
             color: #475569;
-            line-height: 1.65;
-            margin-left: 16px;
+            line-height: 1.7;
+            margin-left: 19px;
+        }
+        .job-desc ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        .job-desc li {
+            margin-bottom: 6px;
         }
         .back {
             position: fixed;
@@ -194,16 +201,35 @@
             left: 20px;
             background: #0f172a;
             color: #fff;
-            padding: 8px 16px;
+            padding: 10px 18px;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 14px;
             text-decoration: none;
             z-index: 1000;
         }
-        @media (max-width: 800px) {
+        .project-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+        .project-box h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+        .project-box p {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin: 0;
+        }
+        @media (max-width: 900px) {
             .page { grid-template-columns: 1fr; margin: 0; border-radius: 0; }
-            .sidebar { padding: 24px; }
-            .main { padding: 24px; }
+            .sidebar { padding: 28px; }
+            .main { padding: 28px; }
         }
     </style>
 </head>
@@ -212,7 +238,7 @@
     <div class="page">
         <aside class="sidebar">
             <div class="photo-wrap">
-                <img src="YOUR-PHOTO-URL.jpg" alt="Cosmin Parnia" class="photo">
+                <img src="photo.jpg" alt="Cosmin Parnia" class="photo">
             </div>
             <div class="side-name">Cosmin Parnia</div>
             <div class="side-title">Service Design & Platform Operations</div>
@@ -223,7 +249,7 @@
                 <div class="side-item">✉️ <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a></div>
                 <div class="side-item">📞 +41 79 720 15 01</div>
                 <div class="side-item">🔗 <a href="#">LinkedIn</a></div>
-                <div class="side-item">🌐 <a href="https://bookcp.github.io/andreicosmin/portfolio.html">Portfolio</a></div>
+                <div class="side-item">🌐 <a href="portfolio.html">Portfolio</a></div>
             </div>
 
             <div class="side-section">
@@ -248,9 +274,11 @@
                     <span class="side-tag">ITIL 4</span>
                     <span class="side-tag">Service Design</span>
                     <span class="side-tag">ITSM Process Design</span>
+                    <span class="side-tag">Process Improvement</span>
                     <span class="side-tag">Workflow Automation</span>
                     <span class="side-tag">CMDB</span>
                     <span class="side-tag">Vendor Management</span>
+                    <span class="side-tag">AI-assisted Analysis</span>
                 </div>
             </div>
 
@@ -304,12 +332,16 @@
                     </div>
                     <div class="job-company">DeepL SE · Cologne, Germany</div>
                     <div class="job-desc">
-                        Redesigned internal service portals using ITSM and behavioural psychology research, replacing legacy ticket categories with intent-based request forms. 
-                        Administered the Atlassian platform across 150+ internal projects, building automation and workflows for approvals, compliance, and service delivery. 
-                        Led the Asana-to-Jira migration for 7 teams (~80 users) from stakeholder consultation through post-migration training. 
-                        Maintained 4.9/5 CSAT across 2,000+ tickets. Designed a centralized software asset inventory (CMDB) in Jira Assets, 
-                        defining the asset model and working with cross-functional stakeholders on governance and procurement. 
-                        Managed vendor relationships alongside budget planning input and contributed to 10+ hiring interviews.
+                        <ul>
+                            <li>Redesigned internal service portals using ITSM and behavioural psychology research, replacing legacy ticket categories with intent-based request forms</li>
+                            <li>Administered the Atlassian platform across 150+ internal projects, building automation and workflows for approvals, compliance, and service delivery</li>
+                            <li>Led the Asana-to-Jira migration for 7 teams (~80 users) from stakeholder consultation through post-migration training</li>
+                            <li>Maintained 4.9/5 CSAT across 2,000+ tickets resolved, with 6-hour average first response</li>
+                            <li>Designed a centralized software asset inventory (CMDB) in Jira Assets, defining the asset model and working with cross-functional stakeholders on governance and procurement</li>
+                            <li>Managed vendor relationships alongside budget planning input</li>
+                            <li>Contributed to 10+ hiring interviews for IT Support and Atlassian Admin roles</li>
+                            <li>Investigated cross-platform incidents (identity, email, cloud, Atlassian) with root cause analysis, coordinating remediation across teams</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -321,11 +353,13 @@
                     </div>
                     <div class="job-company">Morningstar GmbH · Frankfurt, Germany</div>
                     <div class="job-desc">
-                        Owned regional IT support for six offices across Germany, Switzerland, Sweden and Denmark as the point of contact. 
-                        Created the first knowledge base documenting setup and procedures for regional offices. 
-                        Coordinated between local users and global infrastructure teams, escalating regional issues upstream and managing infrastructure-driven changes back to local offices. 
-                        Participated in the Citrix-to-AWS migration as a pre-rollout tester, then owned post-rollout support for Frankfurt and London including training ~100 users. 
-                        Executed hardware and software asset lifecycle for ~500 regional assets.
+                        <ul>
+                            <li>Owned regional IT support for six offices across Germany, Switzerland, Sweden and Denmark as the point of contact</li>
+                            <li>Created the first knowledge base documenting setup and procedures for regional offices</li>
+                            <li>Coordinated between local users and global infrastructure teams, escalating regional issues upstream and managing infrastructure-driven changes back to local offices</li>
+                            <li>Participated in the Citrix-to-AWS migration as a pre-rollout tester, then owned post-rollout support for Frankfurt and London including training ~100 users</li>
+                            <li>Executed hardware and software asset lifecycle for ~500 regional assets including procurement, audits, device rebuilds, and end-of-life</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -337,9 +371,11 @@
                     </div>
                     <div class="job-company">Cognizant SoftVision · Bucharest, Romania</div>
                     <div class="job-desc">
-                        Delivered on-site IT support for ~70 developers across two offices, maintaining ticket resolution above 90% within SLA. 
-                        Managed user provisioning and access control through Active Directory. 
-                        Created and maintained technical documentation in Confluence, standardizing recurring fixes.
+                        <ul>
+                            <li>Delivered on-site IT support for ~70 developers across two offices, maintaining ticket resolution above 90% within SLA</li>
+                            <li>Managed user provisioning and access control through Active Directory including onboarding, offboarding, and ongoing permission changes</li>
+                            <li>Created and maintained technical documentation and support procedures in Confluence, standardizing recurring fixes and reducing dependency on individual team members</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -351,9 +387,20 @@
                     </div>
                     <div class="job-company">TSG Romania · Bucharest, Romania</div>
                     <div class="job-desc">
-                        Delivered remote technical support for petrol stations across Romania and Moldova, resolving approximately 80% of incidents at first contact. 
-                        Supported a multi-system environment including POS terminals, pump controllers, station networking, and office computers.
+                        <ul>
+                            <li>Delivered remote technical support for petrol stations across Romania and Moldova, resolving approximately 80% of incidents at first contact</li>
+                            <li>Supported a multi-system environment including POS terminals, pump controllers, station networking, and office computers</li>
+                            <li>Escalated complex incidents to L2 teams and worked with on-site technicians to coordinate remediation</li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Personal Project</div>
+                <div class="project-box">
+                    <h4>Claere — <a href="https://www.claere.com" target="_blank" style="color: #3b82f6; text-decoration: none;">claere.com</a></h4>
+                    <p>A platform built around authentic longform personal storytelling, with a focus on privacy. Responsible for product concept, user experience design, and feature prioritisation.</p>
                 </div>
             </div>
 
@@ -380,7 +427,9 @@
             <div class="section">
                 <div class="section-title">Certifications</div>
                 <div class="job-desc" style="margin-left: 0;">
-                    ITIL 4 Foundation · Cert. No. GR671864940AP
+                    <ul>
+                        <li>ITIL 4 Foundation · Cert. No. GR671864940AP</li>
+                    </ul>
                 </div>
             </div>
         </main>

@@ -3,936 +3,617 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmin Parnia — Service Design & IT Operations</title>
+    <title>Cosmin Parnia — Portfolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: #fafaf9;
-            color: #1c1917;
-            line-height: 1.65;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
             font-size: 16px;
-            -webkit-font-smoothing: antialiased;
         }
-
-        /* Sidebar */
+        .back {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #0f172a;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            min-height: 100vh;
+        }
         .sidebar {
             position: fixed;
             top: 0;
             left: 0;
-            width: 260px;
+            width: 240px;
             height: 100vh;
-            background: #ffffff;
-            border-right: 1px solid #e7e5e4;
-            padding: 40px 28px;
+            background: #0f172a;
+            color: #fff;
+            padding: 40px 24px;
             overflow-y: auto;
-            z-index: 100;
         }
-
         .sidebar-name {
             font-size: 20px;
             font-weight: 600;
-            letter-spacing: -0.3px;
             margin-bottom: 4px;
         }
-
         .sidebar-role {
             font-size: 13px;
-            color: #57534e;
+            color: #93c5fd;
             margin-bottom: 28px;
             line-height: 1.4;
         }
-
         .sidebar-contact {
-            font-size: 12px;
-            color: #a8a29e;
-            margin-bottom: 40px;
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 36px;
             line-height: 1.8;
         }
-
         .sidebar-contact a {
-            color: #0c4a6e;
+            color: #93c5fd;
             text-decoration: none;
         }
-
-        .sidebar-contact a:hover {
-            text-decoration: underline;
-        }
-
         .nav-title {
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: #a8a29e;
+            letter-spacing: 1.5px;
+            color: #64748b;
             margin-bottom: 12px;
             font-weight: 600;
         }
-
-        .nav-list {
-            list-style: none;
-        }
-
-        .nav-list li {
-            margin-bottom: 4px;
-        }
-
+        .nav-list { list-style: none; }
+        .nav-list li { margin-bottom: 4px; }
         .nav-list a {
             display: block;
             font-size: 13px;
-            color: #57534e;
+            color: #cbd5e1;
             text-decoration: none;
-            padding: 5px 0 5px 12px;
+            padding: 6px 0 6px 12px;
             margin-left: -12px;
             border-left: 2px solid transparent;
             transition: all 0.15s;
             line-height: 1.4;
         }
-
-        .nav-list a:hover,
-        .nav-list a.active {
-            color: #0c4a6e;
-            border-left-color: #0c4a6e;
-            background: #e0f2fe;
+        .nav-list a:hover, .nav-list a.active {
+            color: #fff;
+            border-left-color: #3b82f6;
+            background: rgba(59,130,246,0.1);
         }
-
         .status-pill {
-            margin-top: 28px;
-            font-size: 11px;
-            background: #fff7ed;
-            color: #9a3412;
-            border: 1px solid #fb923c;
-            padding: 10px 12px;
+            margin-top: 24px;
+            font-size: 12px;
+            background: rgba(251,146,60,0.15);
+            color: #fdba74;
+            border: 1px solid rgba(251,146,60,0.3);
+            padding: 12px;
             border-radius: 6px;
             line-height: 1.5;
         }
-
-        /* Main Content */
         .content {
-            margin-left: 260px;
-            padding: 56px 64px;
-            max-width: 860px;
+            margin-left: 240px;
+            padding: 48px 48px;
+            max-width: 720px;
         }
-
-        /* Typography */
         h1 {
-            font-size: 38px;
-            font-weight: 600;
+            font-size: 36px;
+            font-weight: 700;
             letter-spacing: -0.8px;
-            line-height: 1.15;
+            line-height: 1.2;
             margin-bottom: 20px;
-            color: #1c1917;
+            color: #0f172a;
         }
-
         h2 {
             font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #a8a29e;
+            letter-spacing: 2px;
+            color: #94a3b8;
             margin: 56px 0 20px 0;
             font-weight: 600;
-            border-bottom: 1px solid #e7e5e4;
-            padding-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
         }
-
         h3 {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 600;
-            margin: 36px 0 14px 0;
+            margin: 36px 0 16px 0;
             letter-spacing: -0.3px;
             line-height: 1.3;
-            color: #1c1917;
+            color: #0f172a;
         }
-
         h4 {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 600;
-            margin: 24px 0 10px 0;
-            color: #1c1917;
+            margin: 28px 0 12px 0;
+            color: #1e293b;
         }
-
         p {
             margin-bottom: 16px;
-            color: #44403c;
+            color: #475569;
+            font-size: 16px;
         }
-
         p.lead {
-            font-size: 18px;
-            color: #292524;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 19px;
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 24px;
         }
-
-        /* Components */
-        .section {
-            margin-bottom: 40px;
-        }
-
         .callout {
-            background: #e0f2fe;
-            border-left: 3px solid #0c4a6e;
-            padding: 16px 20px;
-            margin: 20px 0;
-            font-size: 14px;
-            color: #44403c;
-            border-radius: 0 6px 6px 0;
-            line-height: 1.6;
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 18px 22px;
+            margin: 24px 0;
+            font-size: 15px;
+            color: #475569;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.65;
         }
-
         .callout-warning {
             background: #fff7ed;
-            border-left-color: #fb923c;
+            border-left-color: #f97316;
         }
-
         .callout-success {
             background: #f0fdf4;
-            border-left-color: #4ade80;
+            border-left-color: #22c55e;
         }
-
-        blockquote {
-            background: #f5f5f4;
-            border-left: 3px solid #a8a29e;
-            padding: 16px 20px;
-            margin: 20px 0;
-            font-style: normal;
-            color: #57534e;
-            font-size: 15px;
-            border-radius: 0 6px 6px 0;
-            line-height: 1.6;
-        }
-
-        blockquote cite {
-            display: block;
-            margin-top: 10px;
-            font-size: 13px;
-            color: #a8a29e;
-            font-style: normal;
-        }
-
-        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
             font-size: 14px;
         }
-
         th {
             text-align: left;
-            padding: 10px 12px;
-            background: #f5f5f4;
-            border-bottom: 2px solid #e7e5e4;
+            padding: 12px 14px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e2e8f0;
             font-weight: 600;
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
-            color: #57534e;
+            letter-spacing: 0.5px;
+            color: #64748b;
         }
-
         td {
-            padding: 10px 12px;
-            border-bottom: 1px solid #e7e5e4;
-            color: #44403c;
+            padding: 12px 14px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #475569;
             vertical-align: top;
-            line-height: 1.5;
-        }
-
-        tr:hover td {
-            background: #fafaf9;
-        }
-
-        /* Lists */
-        ul, ol {
-            margin: 14px 0 14px 22px;
-            color: #44403c;
-        }
-
-        li {
-            margin-bottom: 8px;
             line-height: 1.55;
         }
-
-        /* Workflow diagram */
-        .workflow {
-            background: #ffffff;
-            border: 1px solid #e7e5e4;
-            border-radius: 8px;
-            padding: 24px;
-            margin: 20px 0;
-            font-family: "SFMono-Regular", Consolas, monospace;
-            font-size: 13px;
-            line-height: 1.8;
-            overflow-x: auto;
-            color: #44403c;
+        tr:hover td { background: #f8fafc; }
+        ul, ol {
+            margin: 16px 0 16px 24px;
+            color: #475569;
+            font-size: 16px;
         }
-
-        /* Stats grid */
+        li { margin-bottom: 10px; line-height: 1.6; }
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 14px;
-            margin: 24px 0;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin: 28px 0;
         }
-
         .stat {
-            background: #ffffff;
-            border: 1px solid #e7e5e4;
-            border-radius: 8px;
-            padding: 20px 16px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 24px 16px;
             text-align: center;
         }
-
         .stat-number {
-            font-size: 26px;
+            font-size: 30px;
             font-weight: 700;
-            color: #0c4a6e;
-            letter-spacing: -0.5px;
+            color: #3b82f6;
+            letter-spacing: -1px;
         }
-
         .stat-label {
-            font-size: 11px;
-            color: #a8a29e;
-            margin-top: 4px;
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 6px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
-        /* Tags */
-        .tags {
-            margin: 14px 0;
-        }
-
+        .tags { margin: 16px 0; }
         .tag {
             display: inline-block;
-            font-size: 11px;
-            background: #f5f5f4;
-            color: #57534e;
-            padding: 3px 10px;
-            border-radius: 4px;
-            margin-right: 6px;
-            margin-bottom: 6px;
-            border: 1px solid #e7e5e4;
+            font-size: 12px;
+            background: #f1f5f9;
+            color: #475569;
+            padding: 5px 12px;
+            border-radius: 6px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e2e8f0;
         }
-
-        /* Footer */
-        footer {
-            margin-top: 72px;
-            padding-top: 24px;
-            border-top: 1px solid #e7e5e4;
+        /* Visual Workflow */
+        .flowchart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 32px 0;
+            flex-wrap: wrap;
+            padding: 28px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+        }
+        .flow-box {
+            background: #f8fafc;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 16px 20px;
             font-size: 13px;
-            color: #a8a29e;
+            font-weight: 600;
+            color: #334155;
+            text-align: center;
+            min-width: 110px;
         }
-
-        /* Mobile */
+        .flow-box.active {
+            background: #eff6ff;
+            border-color: #3b82f6;
+            color: #1e40af;
+        }
+        .flow-box.vip {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            color: #92400e;
+        }
+        .flow-arrow {
+            font-size: 20px;
+            color: #94a3b8;
+        }
+        .flow-branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .flow-label {
+            font-size: 11px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        footer {
+            margin-top: 80px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 14px;
+            color: #94a3b8;
+        }
         @media (max-width: 900px) {
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid #e7e5e4;
-                padding: 24px;
-            }
-            .content {
-                margin-left: 0;
-                padding: 32px 24px;
-                max-width: 100%;
-            }
-            .nav-list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 6px;
-            }
-            .nav-list li {
-                margin-bottom: 0;
-            }
-            .nav-list a {
-                margin-left: 0;
-                padding: 6px 12px;
-                border-left: none;
-                border-bottom: 2px solid transparent;
-                background: #f5f5f4;
-                border-radius: 4px;
-            }
-            .nav-list a:hover,
-            .nav-list a.active {
-                margin-left: 0;
-                padding: 6px 12px;
-                border-left: none;
-                border-bottom-color: #0c4a6e;
-            }
-            h1 {
-                font-size: 28px;
-            }
+            .sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid #e2e8f0; }
+            .content { margin-left: 0; padding: 32px 24px; max-width: 100%; }
+            .page { grid-template-columns: 1fr; }
+            .nav-list { display: flex; flex-wrap: wrap; gap: 8px; }
+            .nav-list a { margin-left: 0; padding: 8px 14px; border-left: none; border-bottom: 2px solid transparent; background: #1e293b; border-radius: 4px; }
+            h1 { font-size: 28px; }
         }
     </style>
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="sidebar-name">Cosmin Parnia</div>
-        <div class="sidebar-role">Service Design & Platform Operations</div>
-        <div class="sidebar-contact">
-            <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a><br>
-            <a href="https://linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a><br>
-            +41 79 720 15 01
-        </div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="page">
+        <nav class="sidebar">
+            <div class="sidebar-name">Cosmin Parnia</div>
+            <div class="sidebar-role">Service Design & Platform Operations</div>
+            <div class="sidebar-contact">
+                <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a><br>
+                <a href="#">LinkedIn</a><br>
+                +41 79 720 15 01
+            </div>
+            <div class="nav-title">Index</div>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#helpcenter">Help Center Redesign</a></li>
+                <li><a href="#escalation">Escalation Model</a></li>
+                <li><a href="#iamjam">IAMJAM Engine</a></li>
+                <li><a href="#workshop">Workshop & Data</a></li>
+                <li><a href="#skills">Tools & Skills</a></li>
+                <li><a href="#contact">Status</a></li>
+            </ul>
+            <div class="status-pill">
+                On garden leave from DeepL.<br>
+                Relocating to Basel for FHNW.<br>
+                Seeking 50–80% from Oct 2026.
+            </div>
+        </nav>
 
-        <div class="nav-title">Index</div>
-        <ul class="nav-list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#helpcenter">The Help Center Redesign</a></li>
-            <li><a href="#escalation">The Escalation Model</a></li>
-            <li><a href="#iamjam">The IAMJAM Engine</a></li>
-            <li><a href="#workshop">The Workshop & Data</a></li>
-            <li><a href="#recognition">Recognition</a></li>
-            <li><a href="#skills">Tools & Skills</a></li>
-            <li><a href="#contact">Status</a></li>
-        </ul>
-
-        <div class="status-pill">
-            On garden leave from DeepL.<br>
-            Relocating to Basel for FHNW.<br>
-            Seeking 50–80% from Oct 2026.
-        </div>
-    </nav>
-
-    <main class="content">
-        <h1>How I think about service operations</h1>
-        <p class="lead">
-            I spent six years in IT, but the work that kept me engaged was never the ticket queue. 
-            It was figuring out <em>why</em> people open tickets in the first place, and designing systems that make the queue smaller.
-        </p>
-        <p class="lead">
-            This portfolio is a record of that work at DeepL — not just what I did, but how I thought about it.
-        </p>
-
-        <h2 id="about">Context</h2>
-        <div class="section">
-            <p>
-                At DeepL I was hired as IT Support, but the role kept pulling me upstream. I found myself designing service portals, 
-                mapping cross-tool workflows, proposing SLA architectures, and managing vendor relationships — while still keeping 
-                1,200+ employees running day-to-day.
+        <main class="content">
+            <h1>How I think about service operations</h1>
+            <p class="lead">
+                I spent six years in IT, but the work that kept me engaged was never the ticket queue. 
+                It was figuring out <em>why</em> people open tickets in the first place, and designing systems that make the queue smaller.
             </p>
-            <p>
-                The documents here are the ones I wrote when I was thinking through problems, not the ones I was asked to write. 
-                They are proposals, analyses, and designs that I believed were necessary even when they were not assigned to me.
+            <p class="lead">
+                This portfolio is a record of that work at DeepL — not just what I did, but how I thought about it.
             </p>
 
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">681</div>
-                    <div class="stat-label">Tickets resolved</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Resolution rate</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">95</div>
-                    <div class="stat-label">Confluence pages</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">142</div>
-                    <div class="stat-label">GitLab commits</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">13</div>
-                    <div class="stat-label">Peer shoutouts</div>
-                </div>
-            </div>
-        </div>
-
-        <h2 id="helpcenter">Case Study 1 — The Help Center Redesign</h2>
-        <div class="section">
-            <h3>Replacing IT's mental model with the user's intent</h3>
-            
-            <p>
-                The legacy portal forced employees to navigate IT categories before they could describe their problem. 
-                A user with a broken Google login had to decide: <em>"Is this a Google issue or a Fix an Issue issue?"</em> 
-                This created decision fatigue before the employee could even type.
-            </p>
-
-            <div class="callout">
-                <strong>Problem:</strong> 45% of tickets landed in catch-all categories. ~35 tickets per quarter were misrouted, 
-                adding 0.5–1 business day to resolution. Agents spent significant time in follow-ups asking for context the form should have captured.
-            </div>
-
-            <h4>What I analysed</h4>
-            <p>
-                I reviewed 283 customer-facing tickets from January–March 2026. The data showed that users do not think in IT categories. 
-                They think in symptoms and outcomes: <em>"I cannot open my file"</em> or <em>"I need to get into this tool."</em>
-            </p>
-
-            <h4>What I designed</h4>
-            <p>
-                I replaced 15+ legacy request types with six intent-based forms. Each form is organised by what the user is trying to do, 
-                not by which IT system is involved. The design was grounded in behavioural research:
-            </p>
-
-            <table>
-                <tr>
-                    <th>Principle</th>
-                    <th>Research Basis</th>
-                    <th>How I Applied It</th>
-                </tr>
-                <tr>
-                    <td>Recognition over Recall</td>
-                    <td>Nielsen's Heuristic #6</td>
-                    <td>Dropdowns and radio buttons for all finite answer sets; free text only for 200+ item lists</td>
-                </tr>
-                <tr>
-                    <td>Hick's Law</td>
-                    <td>Decision time increases with choices; threshold ~10–15 items</td>
-                    <td>Maximum 6–7 options per question</td>
-                </tr>
-                <tr>
-                    <td>Progressive Disclosure</td>
-                    <td>Multi-step forms outperform single long forms by 10–20%</td>
-                    <td>Maximum 3–4 visible fields at a time; forms unfold based on answers</td>
-                </tr>
-                <tr>
-                    <td>Decision Fatigue</td>
-                    <td>Quality degrades after 8–12 questions for frustrated users</td>
-                    <td>No path exceeds 7 questions; break-fix form capped at 5</td>
-                </tr>
-            </table>
-
-            <h4>The six forms</h4>
-            <table>
-                <tr>
-                    <th>Form</th>
-                    <th>User's Mental State</th>
-                    <th>Why Separate</th>
-                </tr>
-                <tr>
-                    <td>🔧 Something isn't working</td>
-                    <td>"It WAS working, now it is NOT"</td>
-                    <td>Frustrated user. Shortest path. Incident workflow.</td>
-                </tr>
-                <tr>
-                    <td>🔑 I need access</td>
-                    <td>"I need to get into something"</td>
-                    <td>Highest volume (34.6%). Unique approval workflows.</td>
-                </tr>
-                <tr>
-                    <td>💿 I need software</td>
-                    <td>"I need a tool I don't have"</td>
-                    <td>Security assessment gate. Procurement workflow.</td>
-                </tr>
-                <tr>
-                    <td>⚙️ Set something up</td>
-                    <td>"I need IT to configure something"</td>
-                    <td>Configuration requests. Different from access or software.</td>
-                </tr>
-                <tr>
-                    <td>💻 I need hardware</td>
-                    <td>"I need a physical thing"</td>
-                    <td>Physical fulfilment. Full device lifecycle.</td>
-                </tr>
-                <tr>
-                    <td>❓ I have a question</td>
-                    <td>"I'm not sure what I need"</td>
-                    <td>Catch-all. Feeds learning loop. Reduces "Other" elsewhere.</td>
-                </tr>
-            </table>
-
-            <div class="callout callout-success">
-                <strong>Outcome:</strong> The design eliminated ITIL jargon from the user interface. "SSO" became "connect a tool with DeepL login." 
-                "P1/P2/P3" became "completely blocked / slowed down / minor annoyance." ITIL categories are still applied — but automatically, post-submission, invisible to the user.
-            </div>
-
-            <div class="tags">
-                <span class="tag">ITIL 4</span>
-                <span class="tag">UX Research</span>
-                <span class="tag">Service Design</span>
-                <span class="tag">Jira Service Management</span>
-                <span class="tag">Behavioural Psychology</span>
-            </div>
-        </div>
-
-        <h2 id="escalation">Case Study 2 — The Escalation & Collaboration Model</h2>
-        <div class="section">
-            <h3>Designing the internal operating model, not just the customer-facing portal</h3>
-
-            <p>
-                The new Help Center redesigned what the user sees. This proposal redesigned what happens <em>after</em> submission — 
-                how tickets flow between teams, how ownership transfers, and how we measure performance fairly.
-            </p>
-
-            <div class="callout callout-warning">
-                <strong>Problem:</strong> 94.4% of tickets had no level label. There was no formal escalation path between L1, L2, and L3. 
-                When we escalated, it happened in Slack DMs and nothing was recorded. Performance was measured by ticket count, 
-                which penalised anyone who took on complex work.
-            </div>
-
-            <h4>Core principle</h4>
-            <blockquote>
-                Escalation is a routing decision, not an admission of failure. It means: "this ticket needs expertise or access that lives in another team." 
-                It does not mean "I couldn't handle it."
-            </blockquote>
-
-            <h4>The workflow I designed</h4>
-            <div class="workflow">
-┌─────────┐     ┌──────────────┐     ┌──────────────────┐     ┌──────────┐
-│ Triage  │────▶│ In Progress  │────▶│ Pending Specialist│────▶│ Resolved │
-│ (L1)    │     │ (L1 owns)    │     │ (L2 or L3 owns)  │     │          │
-└─────────┘     └──────────────┘     └──────────────────┘     └──────────┘
-       │                ▲                      │
-       │                │                      │ (de-escalation)
-       │                └──────────────────────┘
-       │
-       └────▶ Waiting for Customer / Approval ─────▶ (back to In Progress)
-            </div>
-
-            <h4>SLA clock management</h4>
-            <p>
-                The most contentious part of any escalation model is who gets blamed for delays. I designed the SLA clocks to pause and resume 
-                based on team ownership, not ticket creation:
-            </p>
-
-            <table>
-                <tr>
-                    <th>SLA</th>
-                    <th>Starts when</th>
-                    <th>Pauses when</th>
-                </tr>
-                <tr>
-                    <td>L1 Resolution</td>
-                    <td>Status = In Progress, Responsible Team = IT Support</td>
-                    <td>Pending Specialist, Waiting for Customer, or Waiting for Approval</td>
-                </tr>
-                <tr>
-                    <td>L2 Resolution</td>
-                    <td>Responsible Team = Platform, status = Pending Specialist</td>
-                    <td>Waiting for Customer, Waiting for Approval, or de-escalated back to L1</td>
-                </tr>
-                <tr>
-                    <td>L3 Resolution</td>
-                    <td>Responsible Team = Automation, status = Pending Specialist</td>
-                    <td>Same as L2</td>
-                </tr>
-            </table>
-
-            <h4>Fair performance tracking</h4>
-            <p>
-                I proposed replacing the single "tickets closed" metric with a balanced scorecard. If you only count tickets, 
-                you reward picking easy work and penalising anyone who takes on complex problems or writes documentation.
-            </p>
-
-            <table>
-                <tr>
-                    <th>Metric</th>
-                    <th>What it captures</th>
-                </tr>
-                <tr>
-                    <td>Tickets resolved</td>
-                    <td>Productivity — still important, just not the only thing</td>
-                </tr>
-                <tr>
-                    <td>Complexity distribution</td>
-                    <td>What types of work someone handles (Standard / Extended / Advanced)</td>
-                </tr>
-                <tr>
-                    <td>Escalation rate</td>
-                    <td>% escalated — low rate means resolving more independently</td>
-                </tr>
-                <tr>
-                    <td>Contributions to L2/L3 tickets</td>
-                    <td>Stretch work tracked via a Contributing Analysts field</td>
-                </tr>
-                <tr>
-                    <td>Knowledge articles created</td>
-                    <td>Prevents repeat tickets, builds team capability</td>
-                </tr>
-                <tr>
-                    <td>CSAT</td>
-                    <td>Quality of resolution, not just speed</td>
-                </tr>
-            </table>
-
-            <div class="tags">
-                <span class="tag">ITSM</span>
-                <span class="tag">SLA Design</span>
-                <span class="tag">Process Architecture</span>
-                <span class="tag">Change Management</span>
-                <span class="tag">Jira Automation</span>
-            </div>
-        </div>
-
-        <h2 id="iamjam">Case Study 3 — The IAMJAM Engine</h2>
-        <div class="section">
-            <h3>The cross-tool workflow that governed access for 1,200+ employees</h3>
-
-            <p>
-                My most invisible but highest-leverage work was the Identity & Access Management pipeline. 
-                Every Phoenix, Vault, GitHub, Copilot, and ClickHouse access request at DeepL passed through a workflow I operated daily. 
-                It ran across five tools, but the same piece of work was measured in each system separately.
-            </p>
-
-            <h4>The flow</h4>
-            <table>
-                <tr>
-                    <th>Tool / Step</th>
-                    <th>What happens</th>
-                </tr>
-                <tr>
-                    <td>Slack</td>
-                    <td>User pings #help-it: "I need access to Phoenix" or "GitHub Copilot license please"</td>
-                </tr>
-                <tr>
-                    <td>Jira (ISE)</td>
-                    <td>OASyS service desk creates a ticket. SLA clock starts.</td>
-                </tr>
-                <tr>
-                    <td>GitLab</td>
-                    <td>jira-webhook automation generates an access-request MR modifying the YAML config file</td>
-                </tr>
-                <tr>
-                    <td>GitLab review</td>
-                    <td>I review the YAML diff, approve as teamlead/resource owner, and merge</td>
-                </tr>
-                <tr>
-                    <td>AE-DIR / LDAP</td>
-                    <td>CI pipeline propagates the change. The user gets the access.</td>
-                </tr>
-                <tr>
-                    <td>Jira (auto-close)</td>
-                    <td>Ticket auto-closes on MR merge. Resolution: Done.</td>
-                </tr>
-            </table>
-
-            <div class="callout">
-                <strong>Why this matters:</strong> The 681 Jira tickets and 142 GitLab commits are not separate work — they are the same work measured in two systems. 
-                My contribution was the human approval decision in step 4: judging whether the requested access was organisationally appropriate. 
-                137 access changes over 24 months, every one checked by hand.
-            </div>
-
-            <h4>Systems I governed access to</h4>
-            <div class="tags">
-                <span class="tag">HashiCorp Vault</span>
-                <span class="tag">Phoenix (internal)</span>
-                <span class="tag">GitHub / Copilot</span>
-                <span class="tag">ClickHouse</span>
-                <span class="tag">Airflow</span>
-                <span class="tag">AWS</span>
-                <span class="tag">Sentry</span>
-                <span class="tag">Metabase</span>
-                <span class="tag">Salesforce</span>
-                <span class="tag">Statsig</span>
-                <span class="tag">Grafana</span>
-                <span class="tag">Databricks</span>
-            </div>
-
-            <div class="tags" style="margin-top: 16px;">
-                <span class="tag">IAM</span>
-                <span class="tag">GitOps</span>
-                <span class="tag">YAML-as-code</span>
-                <span class="tag">LDAP / AE-DIR</span>
-                <span class="tag">CI/CD</span>
-            </div>
-        </div>
-
-        <h2 id="workshop">Case Study 4 — The Workshop & Data Analysis</h2>
-        <div class="section">
-            <h3>Using data to drive operational decisions</h3>
-
-            <p>
-                In March 2026 I facilitated a strategic workshop with my manager and team to align on how we worked, what we owned, and where we were going. 
-                I did not run it on opinions. I ran it on one year of ticket data.
-            </p>
-
-            <h4>The dataset</h4>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">6,085</div>
-                    <div class="stat-label">Tickets (12 months)</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">+24.4%</div>
-                    <div class="stat-label">Year-over-year growth</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">507</div>
-                    <div class="stat-label">Average per month</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">10.6%</div>
-                    <div class="stat-label">Unassigned</div>
+            <h2 id="about">Context</h2>
+            <div class="section">
+                <p>
+                    At DeepL I was hired as IT Support, but the role kept pulling me upstream. I found myself designing service portals, 
+                    mapping cross-tool workflows, proposing SLA architectures, and managing vendor relationships — while still keeping 
+                    1,200+ employees running day-to-day.
+                </p>
+                <p>
+                    The documents here are the ones I wrote when I was thinking through problems, not the ones I was asked to write. 
+                    They are proposals, analyses, and designs that I believed were necessary even when they were not assigned to me.
+                </p>
+                <div class="stats">
+                    <div class="stat"><div class="stat-number">681</div><div class="stat-label">Tickets resolved</div></div>
+                    <div class="stat"><div class="stat-number">95%</div><div class="stat-label">Resolution rate</div></div>
+                    <div class="stat"><div class="stat-number">95</div><div class="stat-label">Confluence pages</div></div>
+                    <div class="stat"><div class="stat-number">142</div><div class="stat-label">GitLab commits</div></div>
+                    <div class="stat"><div class="stat-number">13</div><div class="stat-label">Peer shoutouts</div></div>
                 </div>
             </div>
 
-            <h4>Key findings I presented</h4>
-            <table>
-                <tr>
-                    <th>Finding</th>
-                    <th>Implication</th>
-                </tr>
-                <tr>
-                    <td>94.4% of tickets had no level label</td>
-                    <td>We could not measure how much work was L1 vs L2 vs L3</td>
-                </tr>
-                <tr>
-                    <td>10.6% of tickets sat unassigned</td>
-                    <td>No auto-assignment or round-robin existed; agents self-assigned</td>
-                </tr>
-                <tr>
-                    <td>Priority changed on only 5.5% of tickets, mostly downgraded</td>
-                    <td>Users overstated urgency less than we assumed</td>
-                </tr>
-                <tr>
-                    <td>Volume grew +24% YoY but team size did not</td>
-                    <td>We needed process improvement, not just more people</td>
-                </tr>
-                <tr>
-                    <td>No shared dashboards existed</td>
-                    <td>The team had no visibility into ticket health</td>
-                </tr>
-            </table>
-
-            <h4>The action points I proposed</h4>
-            <ol>
-                <li>Define team scope & responsibility matrix</li>
-                <li>Standardise triage & distribution with assignment rules</li>
-                <li>Build the escalation workflow (see Case Study 2)</li>
-                <li>Review and redefine SLAs against actual performance</li>
-                <li>Build ITSM dashboards embedded in Confluence</li>
-                <li>Implement Jira Asset Management with JAMF/Intune sync</li>
-                <li>Automate offboarding (device lock, backup, collection)</li>
-                <li>Fix onboarding data flow with the People Team</li>
-                <li>Create shared playbooks for recurring tasks</li>
-                <li>Align access levels and map skill gaps for cross-coverage</li>
-            </ol>
-
-            <div class="tags">
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Workshop Facilitation</span>
-                <span class="tag">Strategic Planning</span>
-                <span class="tag">JQL</span>
-                <span class="tag">Continuous Improvement</span>
-            </div>
-        </div>
-
-        <h2 id="recognition">Recognition</h2>
-        <div class="section">
-            <h3>What colleagues said, unprompted</h3>
-            <p>
-                These are verbatim shoutouts from Slack #thanks over 24 months, from 10 distinct stakeholders across 6 functions. 
-                I did not ask for them.
-            </p>
-
-            <blockquote>
-                "To the man, the myth, the dog-dad: Cosmin Parnia! Big kudos to Cosmin for being my go-to person with my crazy ideas. 
-                Whether I'm coming at him with a standard ticket or a totally out there automation idea, he handles it with curiosity and diligence. 
-                He never just gives a 'yes' or 'no'; he asks the questions that actually make the project better and makes sure everything is documented perfectly."
-                <cite>— Paulina Lipińska, People Team</cite>
-            </blockquote>
-
-            <blockquote>
-                "Thanks Cosmin Parnia for introducing some much needed functionality to our KMS Confluence! 
-                You evaluated different tools, communicated extensively with the vendor, created helpful user documentation and wrote some compelling announcement."
-                <cite>— Jared Schmitt, Atlassian Administration</cite>
-            </blockquote>
-
-            <blockquote>
-                "Big belated thanks to Divya, Cosmin Parnia and Jared Schmitt for their fast replies and resolutions to my constant questions, 
-                mini tasks and occasional brainstormings related to our structures, flows and projects!"
-                <cite>— Sven Ladovic, People Team</cite>
-            </blockquote>
-
-            <blockquote>
-                "Additionally, a big thank you to Jared Schmitt and Cosmin Parnia for your valuable insights and contributions to the Asana migration project, 
-                as well as your efforts on the training slides. Your teamwork is invaluable!"
-                <cite>— Divya Arumugam, IT Operations</cite>
-            </blockquote>
-
-            <blockquote>
-                "Never have I ever worked for a company with such an excellent IT-support team: always patient and polite with a focus on finding pragmatic solutions. 
-                Omer Farooq Ghias, Cosmin Parnia, Miles L — thank you for all the numerous times you saved the day for me!"
-                <cite>— Judit Nagy, Office Team</cite>
-            </blockquote>
-
-            <blockquote>
-                "A big thank you to Divya, Jared Schmitt, Kiko and Karthik, and especially Cosmin Parnia for helping us to make some great improvements 
-                to our incident response in #incidents and Jira today, and for all the great work you've done over the last few weeks!"
-                <cite>— Roxane Mohadjerin, Engineering</cite>
-            </blockquote>
-        </div>
-
-        <h2 id="skills">Tools & Skills</h2>
-        <div class="section">
-            <h3>What I use to do the work</h3>
-            
-            <h4>Platforms & Administration</h4>
-            <div class="tags">
-                <span class="tag">Atlassian Suite (Jira, JSM, Assets, Confluence)</span>
-                <span class="tag">ServiceNow</span>
-                <span class="tag">Microsoft 365 / Entra ID / Intune</span>
-                <span class="tag">Google Workspace</span>
-                <span class="tag">Slack Administration</span>
-                <span class="tag">GitLab</span>
+            <h2 id="helpcenter">Case Study 1 — The Help Center Redesign</h2>
+            <div class="section">
+                <h3>Replacing IT's mental model with the user's intent</h3>
+                <p>
+                    The legacy portal forced employees to navigate IT categories before they could describe their problem. 
+                    A user with a broken Google login had to decide: <em>"Is this a Google issue or a Fix an Issue issue?"</em> 
+                    This created decision fatigue before the employee could even type.
+                </p>
+                <div class="callout callout-warning">
+                    <strong>Problem:</strong> 45% of tickets landed in catch-all categories. ~35 tickets per quarter were misrouted, 
+                    adding 0.5–1 business day to resolution. Agents spent significant time in follow-ups asking for context the form should have captured.
+                </div>
+                <h4>What I analysed</h4>
+                <p>
+                    I reviewed 283 customer-facing tickets from January–March 2026. The data showed that users do not think in IT categories. 
+                    They think in symptoms and outcomes: <em>"I cannot open my file"</em> or <em>"I need to get into this tool."</em>
+                </p>
+                <h4>What I designed</h4>
+                <p>
+                    I replaced 15+ legacy request types with six intent-based forms. Each form is organised by what the user is trying to do, 
+                    not by which IT system is involved. The design was grounded in behavioural research:
+                </p>
+                <table>
+                    <tr><th>Principle</th><th>Research Basis</th><th>How I Applied It</th></tr>
+                    <tr><td>Recognition over Recall</td><td>Nielsen's Heuristic #6</td><td>Dropdowns and radio buttons for all finite answer sets; free text only for 200+ item lists</td></tr>
+                    <tr><td>Hick's Law</td><td>Decision time increases with choices; threshold ~10–15 items</td><td>Maximum 6–7 options per question</td></tr>
+                    <tr><td>Progressive Disclosure</td><td>Multi-step forms outperform single long forms by 10–20%</td><td>Maximum 3–4 visible fields at a time; forms unfold based on answers</td></tr>
+                    <tr><td>Decision Fatigue</td><td>Quality degrades after 8–12 questions for frustrated users</td><td>No path exceeds 7 questions; break-fix form capped at 5</td></tr>
+                </table>
+                <h4>The six forms</h4>
+                <table>
+                    <tr><th>Form</th><th>User's Mental State</th><th>Why Separate</th></tr>
+                    <tr><td>🔧 Something isn't working</td><td>"It WAS working, now it is NOT"</td><td>Frustrated user. Shortest path. Incident workflow.</td></tr>
+                    <tr><td>🔑 I need access</td><td>"I need to get into something"</td><td>Highest volume (34.6%). Unique approval workflows.</td></tr>
+                    <tr><td>💿 I need software</td><td>"I need a tool I don't have"</td><td>Security assessment gate. Procurement workflow.</td></tr>
+                    <tr><td>⚙️ Set something up</td><td>"I need IT to configure something"</td><td>Configuration requests. Different from access or software.</td></tr>
+                    <tr><td>💻 I need hardware</td><td>"I need a physical thing"</td><td>Physical fulfilment. Full device lifecycle.</td></tr>
+                    <tr><td>❓ I have a question</td><td>"I'm not sure what I need"</td><td>Catch-all. Feeds learning loop. Reduces "Other" elsewhere.</td></tr>
+                </table>
+                <div class="callout callout-success">
+                    <strong>Outcome:</strong> The design eliminated ITIL jargon from the user interface. "SSO" became "connect a tool with DeepL login." 
+                    "P1/P2/P3" became "completely blocked / slowed down / minor annoyance." ITIL categories are still applied — but automatically, post-submission, invisible to the user.
+                </div>
+                <div class="tags">
+                    <span class="tag">ITIL 4</span><span class="tag">UX Research</span><span class="tag">Service Design</span>
+                    <span class="tag">Jira Service Management</span><span class="tag">Behavioural Psychology</span>
+                </div>
             </div>
 
-            <h4>Process & Design</h4>
-            <div class="tags">
-                <span class="tag">ITIL 4 Foundation</span>
-                <span class="tag">Service Design</span>
-                <span class="tag">ITSM Process Design</span>
-                <span class="tag">Workflow Automation</span>
-                <span class="tag">CMDB / Asset Management</span>
-                <span class="tag">Vendor Management</span>
+            <h2 id="escalation">Case Study 2 — The Escalation & Collaboration Model</h2>
+            <div class="section">
+                <h3>Designing the internal operating model, not just the customer-facing portal</h3>
+                <p>
+                    The new Help Center redesigned what the user sees. This proposal redesigned what happens <em>after</em> submission — 
+                    how tickets flow between teams, how ownership transfers, and how we measure performance fairly.
+                </p>
+                <div class="callout callout-warning">
+                    <strong>Problem:</strong> 94.4% of tickets had no level label. There was no formal escalation path between L1, L2, and L3. 
+                    When we escalated, it happened in Slack DMs and nothing was recorded. Performance was measured by ticket count, 
+                    which penalised anyone who took on complex work.
+                </div>
+                <h4>Core principle</h4>
+                <div class="callout">
+                    Escalation is a routing decision, not an admission of failure. It means: "this ticket needs expertise or access that lives in another team." 
+                    It does not mean "I couldn't handle it."
+                </div>
+                <h4>The workflow I designed</h4>
+                <div class="flowchart">
+                    <div class="flow-box">Triage<br><span style="font-size:11px;font-weight:400;color:#64748b;">L1 receives</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box active">In Progress<br><span style="font-size:11px;font-weight:400;color:#64748b;">L1 owns</span></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-branch">
+                        <div class="flow-label">Escalate</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-box vip">Pending Specialist<br><span style="font-size:11px;font-weight:400;color:#64748b;">L2 or L3 owns</span></div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-label">Resolve or De-escalate</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box active">Resolved</div>
+                </div>
+                <p style="text-align:center;font-size:13px;color:#64748b;margin-top:-12px;">
+                    If de-escalated: returns to L1 with feedback comments. If waiting: SLA clocks pause for all teams.
+                </p>
+
+                <h4>SLA clock management</h4>
+                <p>
+                    The most contentious part of any escalation model is who gets blamed for delays. I designed the SLA clocks to pause and resume 
+                    based on team ownership, not ticket creation:
+                </p>
+                <table>
+                    <tr><th>SLA</th><th>Starts when</th><th>Pauses when</th></tr>
+                    <tr><td>L1 Resolution</td><td>Status = In Progress, Responsible Team = IT Support</td><td>Pending Specialist, Waiting for Customer, or Waiting for Approval</td></tr>
+                    <tr><td>L2 Resolution</td><td>Responsible Team = Platform, status = Pending Specialist</td><td>Waiting for Customer, Waiting for Approval, or de-escalated back to L1</td></tr>
+                    <tr><td>L3 Resolution</td><td>Responsible Team = Automation, status = Pending Specialist</td><td>Same as L2</td></tr>
+                </table>
+
+                <h4>Fair performance tracking</h4>
+                <p>
+                    I proposed replacing the single "tickets closed" metric with a balanced scorecard. If you only count tickets, 
+                    you reward picking easy work and penalising anyone who takes on complex problems or writes documentation.
+                </p>
+                <table>
+                    <tr><th>Metric</th><th>What it captures</th></tr>
+                    <tr><td>Tickets resolved</td><td>Productivity — still important, just not the only thing</td></tr>
+                    <tr><td>Complexity distribution</td><td>What types of work someone handles (Standard / Extended / Advanced)</td></tr>
+                    <tr><td>Escalation rate</td><td>% escalated — low rate means resolving more independently</td></tr>
+                    <tr><td>Contributions to L2/L3 tickets</td><td>Stretch work tracked via a Contributing Analysts field</td></tr>
+                    <tr><td>Knowledge articles created</td><td>Prevents repeat tickets, builds team capability</td></tr>
+                    <tr><td>CSAT</td><td>Quality of resolution, not just speed</td></tr>
+                </table>
+                <div class="tags">
+                    <span class="tag">ITSM</span><span class="tag">SLA Design</span><span class="tag">Process Architecture</span>
+                    <span class="tag">Change Management</span><span class="tag">Jira Automation</span>
+                </div>
             </div>
 
-            <h4>Analysis & Research</h4>
-            <div class="tags">
-                <span class="tag">AI-assisted Data Analysis</span>
-                <span class="tag">Ticket Volume Analysis</span>
-                <span class="tag">Behavioural Psychology (form design)</span>
-                <span class="tag">Requirements Gathering</span>
-                <span class="tag">Stakeholder Consultation</span>
+            <h2 id="iamjam">Case Study 3 — The IAMJAM Engine</h2>
+            <div class="section">
+                <h3>The cross-tool workflow that governed access for 1,200+ employees</h3>
+                <p>
+                    My most invisible but highest-leverage work was the Identity & Access Management pipeline. 
+                    Every Phoenix, Vault, GitHub, Copilot, and ClickHouse access request at DeepL passed through a workflow I operated daily. 
+                    It ran across five tools, but the same piece of work was measured in each system separately.
+                </p>
+                <h4>The flow</h4>
+                <table>
+                    <tr><th>Tool / Step</th><th>What happens</th></tr>
+                    <tr><td>Slack</td><td>User pings #help-it: "I need access to Phoenix" or "GitHub Copilot license please"</td></tr>
+                    <tr><td>Jira (ISE)</td><td>OASyS service desk creates a ticket. SLA clock starts.</td></tr>
+                    <tr><td>GitLab</td><td>jira-webhook automation generates an access-request MR modifying the YAML config file</td></tr>
+                    <tr><td>GitLab review</td><td>I review the YAML diff, approve as teamlead/resource owner, and merge</td></tr>
+                    <tr><td>AE-DIR / LDAP</td><td>CI pipeline propagates the change. The user gets the access.</td></tr>
+                    <tr><td>Jira (auto-close)</td><td>Ticket auto-closes on MR merge. Resolution: Done.</td></tr>
+                </table>
+                <div class="callout">
+                    <strong>Why this matters:</strong> The 681 Jira tickets and 142 GitLab commits are not separate work — they are the same work measured in two systems. 
+                    My contribution was the human approval decision in step 4: judging whether the requested access was organisationally appropriate. 
+                    137 access changes over 24 months, every one checked by hand.
+                </div>
+                <h4>Systems I governed access to</h4>
+                <div class="tags">
+                    <span class="tag">HashiCorp Vault</span><span class="tag">Phoenix (internal)</span><span class="tag">GitHub / Copilot</span>
+                    <span class="tag">ClickHouse</span><span class="tag">Airflow</span><span class="tag">AWS</span>
+                    <span class="tag">Sentry</span><span class="tag">Metabase</span><span class="tag">Salesforce</span>
+                    <span class="tag">Statsig</span><span class="tag">Grafana</span><span class="tag">Databricks</span>
+                </div>
+                <div class="tags" style="margin-top: 12px;">
+                    <span class="tag">IAM</span><span class="tag">GitOps</span><span class="tag">YAML-as-code</span>
+                    <span class="tag">LDAP / AE-DIR</span><span class="tag">CI/CD</span>
+                </div>
             </div>
 
-            <h4>Languages</h4>
-            <table style="max-width: 400px;">
-                <tr>
-                    <td>Romanian</td>
-                    <td>Native</td>
-                </tr>
-                <tr>
-                    <td>English</td>
-                    <td>C1 — fluent professional</td>
-                </tr>
-                <tr>
-                    <td>German</td>
-                    <td>A2 — continuing studies</td>
-                </tr>
-            </table>
-        </div>
+            <h2 id="workshop">Case Study 4 — The Workshop & Data Analysis</h2>
+            <div class="section">
+                <h3>Using data to drive operational decisions</h3>
+                <p>
+                    In March 2026 I facilitated a strategic workshop with my manager and team to align on how we worked, what we owned, and where we were going. 
+                    I did not run it on opinions. I ran it on one year of ticket data.
+                </p>
+                <h4>The dataset</h4>
+                <div class="stats">
+                    <div class="stat"><div class="stat-number">6,085</div><div class="stat-label">Tickets (12 months)</div></div>
+                    <div class="stat"><div class="stat-number">+24.4%</div><div class="stat-label">Year-over-year growth</div></div>
+                    <div class="stat"><div class="stat-number">507</div><div class="stat-label">Average per month</div></div>
+                    <div class="stat"><div class="stat-number">10.6%</div><div class="stat-label">Unassigned</div></div>
+                </div>
+                <h4>Key findings I presented</h4>
+                <table>
+                    <tr><th>Finding</th><th>Implication</th></tr>
+                    <tr><td>94.4% of tickets had no level label</td><td>We could not measure how much work was L1 vs L2 vs L3</td></tr>
+                    <tr><td>10.6% of tickets sat unassigned</td><td>No auto-assignment or round-robin existed; agents self-assigned</td></tr>
+                    <tr><td>Priority changed on only 5.5% of tickets, mostly downgraded</td><td>Users overstated urgency less than we assumed</td></tr>
+                    <tr><td>Volume grew +24% YoY but team size did not</td><td>We needed process improvement, not just more people</td></tr>
+                    <tr><td>No shared dashboards existed</td><td>The team had no visibility into ticket health</td></tr>
+                </table>
+                <h4>The action points I proposed</h4>
+                <ol>
+                    <li>Define team scope & responsibility matrix</li>
+                    <li>Standardise triage & distribution with assignment rules</li>
+                    <li>Build the escalation workflow (see Case Study 2)</li>
+                    <li>Review and redefine SLAs against actual performance</li>
+                    <li>Build ITSM dashboards embedded in Confluence</li>
+                    <li>Implement Jira Asset Management with JAMF/Intune sync</li>
+                    <li>Automate offboarding (device lock, backup, collection)</li>
+                    <li>Fix onboarding data flow with the People Team</li>
+                    <li>Create shared playbooks for recurring tasks</li>
+                    <li>Align access levels and map skill gaps for cross-coverage</li>
+                </ol>
+                <div class="tags">
+                    <span class="tag">Data Analysis</span><span class="tag">Workshop Facilitation</span>
+                    <span class="tag">Strategic Planning</span><span class="tag">JQL</span>
+                    <span class="tag">Continuous Improvement</span>
+                </div>
+            </div>
 
-        <h2 id="contact">Current Status</h2>
-        <div class="section">
-            <p>
-                I am on garden leave from DeepL until 30 September 2026. I am relocating to Basel to begin a part-time 
-                BSc in Business Information Technology at FHNW. I am looking for a long-term, part-time role (50–80%) 
-                starting October 2026 — ideally in business analysis, service operations, or platform consulting.
-            </p>
-            <p>
-                I am an EU citizen. No work permit sponsorship required.
-            </p>
-            <p style="margin-top: 24px;">
-                <strong>Email:</strong> <a href="mailto:cosminparnia@gmail.com" style="color: #0c4a6e;">cosminparnia@gmail.com</a><br>
-                <strong>Phone:</strong> +41 79 720 15 01<br>
-                <strong>LinkedIn:</strong> <a href="#" style="color: #0c4a6e;">linkedin.com/in/YOUR-LINKEDIN</a>
-            </p>
-        </div>
+            <h2 id="skills">Tools & Skills</h2>
+            <div class="section">
+                <h3>What I use to do the work</h3>
+                <h4>Platforms & Administration</h4>
+                <div class="tags">
+                    <span class="tag">Atlassian Suite (Jira, JSM, Assets, Confluence)</span>
+                    <span class="tag">ServiceNow</span>
+                    <span class="tag">Microsoft 365 / Entra ID / Intune</span>
+                    <span class="tag">Google Workspace</span>
+                    <span class="tag">Slack Administration</span>
+                    <span class="tag">GitLab</span>
+                </div>
+                <h4>Process & Design</h4>
+                <div class="tags">
+                    <span class="tag">ITIL 4 Foundation</span>
+                    <span class="tag">Service Design</span>
+                    <span class="tag">ITSM Process Design</span>
+                    <span class="tag">Workflow Automation</span>
+                    <span class="tag">CMDB / Asset Management</span>
+                    <span class="tag">Vendor Management</span>
+                </div>
+                <h4>Analysis & Research</h4>
+                <div class="tags">
+                    <span class="tag">AI-assisted Data Analysis</span>
+                    <span class="tag">Ticket Volume Analysis</span>
+                    <span class="tag">Behavioural Psychology (form design)</span>
+                    <span class="tag">Requirements Gathering</span>
+                    <span class="tag">Stakeholder Consultation</span>
+                </div>
+                <h4>Languages</h4>
+                <table style="max-width: 420px;">
+                    <tr><td>Romanian</td><td>Native</td></tr>
+                    <tr><td>English</td><td>C1 — fluent professional</td></tr>
+                    <tr><td>German</td><td>A2 — continuing studies</td></tr>
+                </table>
+            </div>
 
-        <footer>
-            Last updated: July 2026 · Built by hand · Hosted on GitHub Pages
-        </footer>
-    </main>
+            <h2 id="contact">Current Status</h2>
+            <div class="section">
+                <p>
+                    I am on garden leave from DeepL until 30 September 2026. I am relocating to Basel to begin a part-time 
+                    BSc in Business Information Technology at FHNW. I am looking for a long-term, part-time role (50–80%) 
+                    starting October 2026 — ideally in business analysis, service operations, or platform consulting.
+                </p>
+                <p>I am an EU citizen. No work permit sponsorship required.</p>
+                <p style="margin-top: 24px;">
+                    <strong>Email:</strong> <a href="mailto:cosminparnia@gmail.com" style="color: #3b82f6;">cosminparnia@gmail.com</a><br>
+                    <strong>Phone:</strong> +41 79 720 15 01<br>
+                    <strong>LinkedIn:</strong> <a href="#" style="color: #3b82f6;">linkedin.com/in/YOUR-LINKEDIN</a>
+                </p>
+            </div>
+
+            <footer>
+                Last updated: July 2026 · Built by hand · Hosted on GitHub Pages
+            </footer>
+        </main>
+    </div>
 </body>
 </html>

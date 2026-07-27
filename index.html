@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmin Parnia — Service Design & Platform Operations</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+        header {
+            margin-bottom: 64px;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .title {
+            font-size: 18px;
+            color: #666;
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+        .contact {
+            font-size: 14px;
+            color: #666;
+        }
+        .contact a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+        }
+        .contact a:hover {
+            border-bottom-color: #1a1a1a;
+        }
+        .status {
+            margin-top: 24px;
+            padding: 16px 20px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #444;
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin: 64px 0 24px 0;
+            font-weight: 600;
+        }
+        .project {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .project:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .project-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        .project-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+        .project p {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+        .project p:last-child {
+            margin-bottom: 0;
+        }
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            color: #666;
+            background: #f5f5f5;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-right: 6px;
+            margin-top: 8px;
+        }
+        .about p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 16px;
+        }
+        footer {
+            margin-top: 80px;
+            padding-top: 32px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 14px;
+            color: #999;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 40px 20px; }
+            .name { font-size: 28px; }
+            .project { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="name">Cosmin Parnia</div>
+            <div class="title">Service Design & Platform Operations</div>
+            <div class="contact">
+                <a href="mailto:cosminparnia@gmail.com">cosminparnia@gmail.com</a> &nbsp;/&nbsp;
+                <a href="https://linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> &nbsp;/&nbsp;
+                +41 79 720 15 01
+            </div>
+            <div class="status">
+                On garden leave from DeepL. Relocating to Basel for part-time BSc Business IT at FHNW (September 2026). 
+                Looking for a part-time role (50–80%) from October 2026.
+            </div>
+        </header>
+
+        <section class="about">
+            <h2>About</h2>
+            <p>
+                I have six years of experience in IT, but the work that kept me engaged was never the ticket queue. 
+                It was figuring out why people open tickets in the first place, and designing systems that make the queue smaller.
+            </p>
+            <p>
+                At DeepL, I redesigned internal service portals using behavioural psychology research, led a 7-team tool migration, 
+                and built a software asset inventory from scratch. I enjoy working across functions — talking to stakeholders, 
+                mapping processes, and writing things down so the next person is not lost.
+            </p>
+        </section>
+
+        <section>
+            <h2>Selected Work</h2>
+
+            <div class="project">
+                <div class="project-title">IT Support Help Center Redesign</div>
+                <div class="project-meta">DeepL · 2025–2026 · Service Design</div>
+                <p>
+                    The legacy portal forced 1,200+ employees to navigate IT categories before they could describe their problem. 
+                    I analysed 283 tickets to identify misrouting patterns, then replaced 15+ legacy request types with six intent-based forms.
+                </p>
+                <p>
+                    The design was grounded in behavioural research: Hick's Law to limit choices, progressive disclosure to reduce 
+                    cognitive load, and decision-fatigue awareness to keep forms under seven questions. Every jargon term was replaced 
+                    with plain language — "SSO" became "connect a tool with DeepL login."
+                </p>
+                <span class="tag">ITIL 4</span>
+                <span class="tag">UX Research</span>
+                <span class="tag">Process Design</span>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Escalation & Collaboration Model</div>
+                <div class="project-meta">DeepL · 2026 · ITSM Architecture</div>
+                <p>
+                    The support team had no formal escalation path between L1, L2, and L3. Escalations happened in Slack DMs and nothing was recorded. 
+                    I designed a complete operating model with workflow transitions, SLA clock management, and queue routing.
+                </p>
+                <p>
+                    The model included a de-escalation path with mandatory feedback comments, so L1 could learn from specialist work. 
+                    I also proposed a balanced scorecard replacing ticket-count KPIs with complexity-weighted metrics, escalation rates, 
+                    and knowledge-article contributions.
+                </p>
+                <span class="tag">ServiceNow</span>
+                <span class="tag">SLA Design</span>
+                <span class="tag">Change Management</span>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Asana-to-Jira Migration</div>
+                <div class="project-meta">DeepL · 2025 · Project Coordination</div>
+                <p>
+                    Led the migration of seven teams (~80 users) from Asana to Jira over three months. 
+                    Managed stakeholder consultation, tool evaluation, data migration, and post-migration training. 
+                    Six of seven teams were successfully onboarded.
+                </p>
+                <span class="tag">Stakeholder Management</span>
+                <span class="tag">Training Design</span>
+                <span class="tag">Atlassian</span>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Software Asset Inventory (CMDB)</div>
+                <div class="project-meta">DeepL · 2024–2025 · Business Analysis</div>
+                <p>
+                    Designed a centralized software asset inventory in Jira Assets to replace scattered spreadsheets. 
+                    Defined the asset model, evaluated implementation approaches, and worked with procurement and governance stakeholders 
+                    to support software decisions. This became the single source of truth for licensing and compliance questions.
+                </p>
+                <span class="tag">CMDB Design</span>
+                <span class="tag">Vendor Management</span>
+                <span class="tag">Governance</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="project" style="padding: 24px 32px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                    <div class="project-title" style="font-size: 16px; margin: 0;">DeepL SE</div>
+                    <div class="project-meta" style="margin: 0;">May 2023 – Sept 2026</div>
+                </div>
+                <p style="font-size: 14px; color: #666; margin: 0;">IT Support & Platform Specialist · Cologne, Germany</p>
+            </div>
+            <div class="project" style="padding: 24px 32px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                    <div class="project-title" style="font-size: 16px; margin: 0;">Morningstar GmbH</div>
+                    <div class="project-meta" style="margin: 0;">May 2021 – April 2023</div>
+                </div>
+                <p style="font-size: 14px; color: #666; margin: 0;">IT Support Specialist · Frankfurt, Germany</p>
+            </div>
+        </section>
+
+        <footer>
+            Basel, Switzerland · Available part-time from October 2026 · EU Citizen, no permit required
+        </footer>
+    </div>
+</body>
+</html>
